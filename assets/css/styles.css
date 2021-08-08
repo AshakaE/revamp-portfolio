@@ -20,11 +20,11 @@
 
 .panel {
   background-color: greenyellow;
-  position: absolute;
-  width: 100%;
-  /* box-shadow: 0 9px 57px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 9px 57px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 9px 57px rgba(0, 0, 0, 0.5); */
+  position: fixed;
+}
+
+.noscroll {
+  overflow-y: hidden;
 }
 
 .disp {

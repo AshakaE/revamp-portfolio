@@ -4,6 +4,7 @@ let list = document.getElementById('data-list');
 let one = document.getElementById('one');
 let two = document.getElementById('two');
 let three = document.getElementById('three');
+let bod = document.getElementById('data-scroll');
 
 const clickFunction = () => {
   menu.classList.toggle('rotate-icon');
@@ -16,6 +17,7 @@ window.addEventListener('load', function () {
   menu.addEventListener('click', function () {
     list.classList.remove('list-items');
     panel.classList.remove('disp');
+    // bod.classList.toggle('noscroll');
     list.classList.remove('data-list');
     one.classList.remove('one');
     two.classList.remove('two');

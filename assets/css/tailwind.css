@@ -467,8 +467,8 @@ video {
 	--tw-ring-shadow: 0 0 #0000;
 	--tw-shadow: 0 0 #0000;
 }
-.absolute{
-	position: absolute;
+.fixed{
+	position: fixed;
 }
 .relative{
 	position: relative;
@@ -490,6 +490,9 @@ video {
 }
 .z-30{
 	z-index: 30;
+}
+.m-auto{
+	margin: auto;
 }
 .my-\[7px\]{
 	margin-top: 7px;

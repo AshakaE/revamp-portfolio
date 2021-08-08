@@ -7,13 +7,10 @@
     <title>AshakaE</title>
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
-    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="h-full">
+  <body class="h-full w-80 m-auto" id="data-scroll">
     <nav class="w-80 flex justify-between bg-primary relative">
       <div>one</div>
       <ul class="flex">
@@ -21,34 +18,13 @@
         <li>three</li>
         <li>four</li>
       </ul>
-      <div
-        id="toggle-icon"
-        class="absolute z-50 right-[1.1rem] top-[.7rem]"
-        onclick="clickFunction()"
-      >
-        <div
-          class="bar1 w-9 h-[3px] my-[7px] bg-white transition duration-500"
-        ></div>
-        <div
-          class="bar2 w-9 h-[3px] my-[7px] bg-white transition duration-500"
-        ></div>
-        <div
-          class="bar3 w-9 h-[3px] my-[7px] bg-white transition duration-500"
-        ></div>
+      <div id="toggle-icon" class="fixed z-50 right-[1.1rem] top-[.7rem]" onclick="clickFunction()" >
+        <div class="bar1 w-9 h-[3px] my-[7px] bg-white transition duration-500"></div>
+        <div class="bar2 w-9 h-[3px] my-[7px] bg-white transition duration-500"></div>
+        <div class="bar3 w-9 h-[3px] my-[7px] bg-white transition duration-500"></div>
       </div>
-      <div class="panel z-40 relative rounded-b-xl" id="data-panel">
-        <ul
-          class="
-            flex flex-col
-            w-full
-            justify-center
-            pt-16
-            pl-10
-            data-list
-            list-items
-          "
-          id="data-list"
-        >
+      <div class="panel z-40 relative rounded-b-xl w-80" id="data-panel">
+        <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items" id="data-list">
           <li class="one" id="one">two</li>
           <li class="mt-4 two" id="two">three</li>
           <li class="mt-4 three" id="three">four</li>
@@ -63,38 +39,48 @@
         error suscipit. Vitae repellat aut iste, sint fugiat explicabo
         blanditiis modi eaque, atque maxime possimus. A fuga soluta repudiandae
         placeat alias, consectetur consequuntur in hic eligendi quis, repellat
-        animi magnam laudantium? Ex!
+        animi magnam laudantium? Ex! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Alias, laudantium. Eos adipisci nam dicta,
+        voluptatibus quasi corrupti quos quaerat fuga illo officia cum
+        blanditiis iusto, facilis omnis incidunt maxime quae. Ut omnis nostrum
+        saepe molestias incidunt veniam distinctio iure autem. Illo
+        necessitatibus laboriosam sequi voluptatum accusamus aut officiis quasi
+        quo obcaecati repudiandae, saepe voluptatem dicta, tempora soluta,
+        dolorum cupiditate! Eum. Ea sint minus, doloribus maiores ex in officiis
+        quae nihil voluptatem perspiciatis sequi cupiditate? Odit expedita quod
+        eligendi voluptatibus tempore sed sit, libero veniam voluptas aliquid,
+        consequatur molestiae accusamus natus. Omnis assumenda cumque suscipit
+        placeat officia aspernatur deserunt quae, ratione, quos ea repellat
+        corrupti consequuntur asperiores tempore fuga. Dolore eius deleniti esse
+        labore tenetur sapiente unde, quibusdam voluptate corrupti ratione?
+        Voluptatem doloremque perspiciatis qui voluptate praesentium quisquam
+        sit similique dolorem doloribus consequuntur suscipit natus sapiente
+        reiciendis autem cum fuga laborum, ab nihil delectus rem iste. Alias
+        animi vitae nostrum quae. Veritatis earum voluptate et! Ex, totam
+        nostrum dicta qui, ipsam eius eos, error veritatis dolorum quibusdam
+        consequatur. Cumque distinctio maxime, cupiditate aperiam consequuntur
+        doloribus, dolore minima assumenda esse iste sequi! Animi fugiat
+        consectetur iusto. Praesentium consequuntur laborum voluptatem iusto
+        cupiditate exercitationem earum sequi in expedita repudiandae, quasi
+        optio minus veritatis itaque illo iste quod mollitia vel hic impedit?
+        Labore, eveniet! Veniam autem dolorum nam laboriosam voluptatem itaque,
+        dolorem amet vel necessitatibus eos, quo magnam error voluptatum
+        voluptates quae! Quibusdam sit velit cum adipisci dolores alias culpa
+        facilis illo voluptatibus dolor. Aliquam tenetur, itaque facilis commodi
+        totam porro explicabo enim voluptates placeat ullam. Aliquam tempore
+        delectus quisquam totam impedit. Dignissimos dicta quisquam accusamus
+        hic non, ullam necessitatibus veritatis molestias saepe porro? Tenetur
+        dolore aliquid dolorem ut dicta magni facere asperiores officiis saepe
+        soluta? Repellat blanditiis odit perspiciatis placeat ab? Itaque
+        voluptates veritatis ex inventore culpa? Omnis non soluta dolore porro
+        saepe?
       </header>
       <section>services</section>
       <section>Portfolio</section>
       <section>Tools</section>
       <section>Contact</section>
     </main>
-    <footer
-      class="
-        flex
-        w-full
-        h-40
-        bottom-0
-        flex-col
-        justify-center
-        bg-primary
-        relative
-        z-30
-        before:h-32
-        before:w-full
-        before:absolute
-        before:-top-32
-        before:shadow-scoop
-        before:rounded-bl-4xl
-        after:h-32
-        after:w-full
-        after:absolute
-        after:-top-32
-        after:shadow-scoop
-        after:rounded-br-4xl
-      "
-    >
+    <footer class=" flex w-full h-40 bottom-0 flex-col justify-center bg-primary relative z-30 before:h-32 before:w-full before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl after:h-32 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl">
       <ul class="flex w-full justify-around">
         <li>1</li>
         <li>2</li>
