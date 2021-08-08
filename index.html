@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AshakaE</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <script defer src="./app.js"></script>
+  </head>
+  <body class="h-full">
+    <nav class="w-80 flex justify-between bg-primary relative">
+      <div>one</div>
+      <ul class="flex">
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+      </ul>
+      <div
+        id="toggle-icon"
+        class="absolute z-50 right-[1.1rem] top-[.7rem]"
+        onclick="clickFunction()"
+      >
+        <div
+          class="bar1 w-9 h-[3px] my-[7px] bg-white transition duration-500"
+        ></div>
+        <div
+          class="bar2 w-9 h-[3px] my-[7px] bg-white transition duration-500"
+        ></div>
+        <div
+          class="bar3 w-9 h-[3px] my-[7px] bg-white transition duration-500"
+        ></div>
+      </div>
+      <div class="panel z-40 relative rounded-b-xl" id="data-panel">
+        <ul
+          class="
+            flex flex-col
+            w-full
+            justify-center
+            pt-16
+            pl-10
+            data-list
+            list-items
+          "
+          id="data-list"
+        >
+          <li class="one" id="one">two</li>
+          <li class="mt-4 two" id="two">three</li>
+          <li class="mt-4 three" id="three">four</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at
+        soluta sequi ullam aspernatur? Commodi laborum, quod voluptatibus
+        obcaecati, officia non animi ipsa libero nisi nobis, architecto deleniti
+        error suscipit. Vitae repellat aut iste, sint fugiat explicabo
+        blanditiis modi eaque, atque maxime possimus. A fuga soluta repudiandae
+        placeat alias, consectetur consequuntur in hic eligendi quis, repellat
+        animi magnam laudantium? Ex!
+      </header>
+      <section>services</section>
+      <section>Portfolio</section>
+      <section>Tools</section>
+      <section>Contact</section>
+    </main>
+    <footer
+      class="
+        flex
+        w-full
+        h-40
+        bottom-0
+        flex-col
+        justify-center
+        bg-primary
+        relative
+        z-30
+        before:h-32
+        before:w-full
+        before:absolute
+        before:-top-32
+        before:shadow-scoop
+        before:rounded-bl-4xl
+        after:h-32
+        after:w-full
+        after:absolute
+        after:-top-32
+        after:shadow-scoop
+        after:rounded-br-4xl
+      "
+    >
+      <ul class="flex w-full justify-around">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <ul class="flex w-full justify-around">
+        <li>Portfolio</li>
+        <li>Tools</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </footer>
+  </body>
+</html>

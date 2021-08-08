@@ -1,0 +1,25 @@
+{
+  "name": "revamp-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tw:build": "cross-env TAILWIND_MODE=build postcss ./src/tailwind.css -o ./assets/css/tailwind.css --verbose",
+    "tw:prod": "cross-env NODE_ENV=production postcss build ./src/tailwind.css -o ./assets/css/tailwind.css -w --verbose --minify",
+    "tw:watch": "onchange tailwind.config.js src/**/*.css ./**/*.html -- npm run tw:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.7",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^8.3.1"
+  }
+}
