@@ -27,7 +27,7 @@
           <div class="bar2 w-9 h-[3px] my-[7px] bg-white transition duration-500"></div>
           <div class="bar3 w-9 h-[3px] my-[7px] bg-white transition duration-500"></div>
         </div>
-        <div class="panel z-30 relative rounded-b-xl w-80" id="data-panel">
+        <div class="panel z-30 absolute rounded-b-xl w-80" id="data-panel">
           <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items" id="data-list">
             <li class="one" id="one">two</li>
             <li class="mt-4 two" id="two">three</li>
@@ -57,8 +57,8 @@
       <section>services</section>
       <section>Portfolio</section>
       <section>Tools</section>
-      <section class="px-3 mb-20">
-        <form action="mailto:contact@yourdomain.com" method="POST" name="EmailForm" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
+      <section class="px-3 mb-28">
+        <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
           <fieldset class="flex flex-col align-top justify-between">
             <input
               id="email"
@@ -73,18 +73,18 @@
               name="name"
               type="text"
               placeholder="Your name"
-              class="mt-4 py-2 px-3 rounded-xl bg-bodyDark text-red-500 focus:border-[1px] focus:border-primaryLight outline-none"
+              class="mt-4 py-2 px-3 rounded-xl bg-bodyDark text-textDark focus:border-[1px] focus:border-primaryLight outline-none"
               required
             />
             <textarea
               id="message"
               name="message"
-              class="mt-4 rounded-xl py-2 px-3 bg-bodyDark text-primaryLight overflow-hidden focus:border-[1px] focus:border-primaryLight outline-none area"
+              class="mt-4 rounded-xl py-2 px-3 bg-bodyDark text-textDark overflow-hidden focus:border-[1px] focus:border-primaryLight outline-none area"
               placeholder="Enter your message here"
               rows="3"
               required
             ></textarea>
-            <button type="submit" class="bg-blue-600 w-2/4 mt-5 rounded-xl py-2 text-white">Send</button>
+            <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/4 rounded-xl py-2 text-white hover:cursor-pointer hover:bg-primary">Send</button>
           </fieldset>
         </form>
       </section>
@@ -100,8 +100,8 @@
         bg-primary
         relative
         z-30
-        before:h-32 before:w-full before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl
-        after:h-32 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl
+        before:h-28 before:w-full before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl
+        after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl
       "
     >
       <ul class="flex w-full justify-around">

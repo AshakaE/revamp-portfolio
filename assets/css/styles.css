@@ -124,13 +124,13 @@
 
 input[type="text"]::placeholder {
   color: #989ACD;
-  opacity: 50%;
+  opacity: 70%;
 }
 
-area::-webkit-resizer {
+textarea::-webkit-input-placeholder, textarea::-moz-placeholder {
   color: #989ACD;
-  border: 2px solid black;
-  background: red;
-  box-shadow: 0 0 5px 5px blue;
-  outline: 2px solid yellow;
+}
+
+::-webkit-resizer {
+  resize: none;
 }
