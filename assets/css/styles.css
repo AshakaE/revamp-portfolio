@@ -19,12 +19,9 @@
 }
 
 .panel {
-  background-color: greenyellow;
+  background-color: #abff2e;
   position: fixed;
-}
-
-.noscroll {
-  overflow-y: hidden;
+  top: 36px;
 }
 
 .disp {
@@ -123,4 +120,17 @@
     -ms-transform: translateX(0px);
     -o-transform: translateX(0px);
   }
+}
+
+input[type="text"]::placeholder {
+  color: #989ACD;
+  opacity: 50%;
+}
+
+area::-webkit-resizer {
+  color: #989ACD;
+  border: 2px solid black;
+  background: red;
+  box-shadow: 0 0 5px 5px blue;
+  outline: 2px solid yellow;
 }
