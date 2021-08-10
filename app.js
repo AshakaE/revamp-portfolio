@@ -4,6 +4,7 @@ let list = document.getElementById("data-list")
 let one = document.getElementById("one")
 let two = document.getElementById("two")
 let three = document.getElementById("three")
+let rev = [panel, list, one, two, three]
 
 const clickFunction = () => {
   menu.classList.toggle("rotate-icon")
@@ -15,8 +16,10 @@ window.addEventListener("load", function () {
 
   menu.addEventListener("click", function () {
     list.classList.remove("list-items")
-    panel.classList.remove("disp")
     list.classList.remove("data-list")
+
+    panel.classList.remove("disp")
+
     one.classList.remove("one")
     two.classList.remove("two")
     three.classList.remove("three")
@@ -25,24 +28,14 @@ window.addEventListener("load", function () {
 
     if (direction === "toRight") {
       direction = "toLeft"
-      panel.style.animationDirection = "reverse"
-      list.style.animationDirection = "reverse"
-
-      one.style.animationDirection = "reverse"
-      two.style.animationDirection = "reverse"
-      three.style.animationDirection = "reverse"
+      rev.forEach((el) => (el.style.animationDirection = "reverse"))
     } else {
       direction = "toRight"
-      panel.style.animationDirection = ""
-      list.style.animationDirection = ""
-
-      one.style.animationDirection = ""
-      two.style.animationDirection = ""
-      three.style.animationDirection = ""
+      rev.forEach((el) => (el.style.animationDirection = ""))
     }
 
-    panel.classList.add("disp")
     list.classList.add("data-list")
+    panel.classList.add("disp")
 
     one.classList.add("one")
     two.classList.add("two")

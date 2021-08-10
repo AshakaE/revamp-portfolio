@@ -18,6 +18,8 @@ module.exports = {
       },
       boxShadow: {
         scoop: "0 50px 0 0 #1C2AAF",
+        troop: "0 50px 0 0 #D1D6FE",
+        droop: "0 50px 0 0 #FFFFFF",
       },
       borderRadius: {
         "4xl": "3.5rem",
