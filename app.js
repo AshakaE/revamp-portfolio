@@ -6,15 +6,13 @@ let two = document.getElementById("two")
 let three = document.getElementById("three")
 let rev = [panel, list, one, two, three]
 
-const clickFunction = () => {
-  menu.classList.toggle("rotate-icon")
-}
 
 window.addEventListener("load", function () {
   let direction = ""
   list.classList.add("list-items")
-
+  
   menu.addEventListener("click", function () {
+    menu.classList.toggle("rotate-icon")
     list.classList.remove("list-items")
     list.classList.remove("data-list")
 

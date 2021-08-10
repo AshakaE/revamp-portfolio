@@ -24,6 +24,9 @@ module.exports = {
       borderRadius: {
         "4xl": "3.5rem",
       },
+      transitionTimingFunction: {
+        "menu-expo": "cubic-bezier(0.87, 0, 0.13, 1)",
+      },
     },
   },
   variants: {
