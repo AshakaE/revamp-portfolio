@@ -10,55 +10,87 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="h-full w-80 m-auto">
+  <body class="h-full w-80 m-auto font-body">
     <nav class="w-80 flex justify-between bg-primary relative">
       <div>one</div>
       <ul class="flex">
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
+        <li>Portfolio</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
-      <div class="flex justify-between w-full fixed bg-[#abff2e] z-50 h-9">
-        <div>
-          <h2 class="text-xl text-yellow-300 z-30">Home</h2>
+      <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12">
+        <div class="pl-3">
+          <h2 class="text-xl text-white z-30">Home</h2>
         </div>
-        <div id="toggle-icon" class="z-50 right-[1.1rem] top-[.7rem]">
+        <div id="toggle-icon" class="z-50 right-[1.1rem] top-[.7rem] pr-3">
           <div class="bar1 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
           <div class="bar2 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
           <div class="bar3 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
         </div>
         <div class="panel z-30 absolute rounded-b-xl w-80" id="data-panel">
-          <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items" id="data-list">
-            <li class="one" id="one">two</li>
-            <li class="mt-4 two" id="two">three</li>
-            <li class="mt-4 three" id="three">four</li>
+          <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items text-white text-3xl font-semibold" id="data-list">
+            <li class="one" id="one">Portfolio</li>
+            <li class="mt-4 two" id="two">About</li>
+            <li class="mt-4 three" id="three">Contact</li>
           </ul>
         </div>
       </div>
     </nav>
-    <main class="">
-      <header class="text-white bg-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at soluta sequi ullam aspernatur? Commodi laborum, quod voluptatibus obcaecati, officia non animi ipsa libero nisi nobis,
-        architecto deleniti error suscipit. Vitae repellat aut iste, sint fugiat explicabo blanditiis modi eaque, atque maxime possimus. A fuga soluta repudiandae placeat alias, consectetur
-        consequuntur in hic eligendi quis, repellat animi magnam laudantium? Ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, laudantium. Eos adipisci nam dicta, voluptatibus quasi
-        corrupti quos quaerat fuga illo officia cum blanditiis iusto, facilis omnis incidunt maxime quae. Ut omnis nostrum saepe molestias incidunt veniam distinctio iure autem. Illo necessitatibus
-        laboriosam sequi voluptatum accusamus aut officiis quasi quo obcaecati repudiandae, saepe voluptatem dicta, tempora soluta, dolorum cupiditate! Eum. Ea sint minus
+    <main class="mt-10">
+      <header class="text-white bg-primary px-3">
+        <div class="bg-primaryLight rounded-2xl p-3 text-center">
+          <h1>
+            Hey there. I'm Ashaka <br />
+            <span>I'm a software developer</span>
+          </h1>
+          <p>
+            I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
+          </p>
+        </div>
       </header>
-      <section class="bg-primary text-white h-40">services</section>
+      <section class="bg-primary text-white h-[min-content] py-28">
+        <h2 class="text-center">Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-3 justify-items-center w-full">
+          <div class="">Project 1</div>
+          <div class="">Project 2</div>
+          <div class="">Project 3</div>
+        </div>
+      </section>
       <section
         class="
-          h-40
+          h-[min-content]
           relative
           bg-textLight
           rounded-tr-4xl
-          before:h-28 before:w-[50%] before:absolute before:-top-28 before:shadow-troop before:rounded-bl-4xl
-          after:h-28 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
+          before:h-28 before:bg-red-700 before:bg-opacity-40 before:w-[50%] before:absolute before:-top-28 before:shadow-troop before:rounded-bl-4xl
+          after:h-28 after:bg-red-700 after:bg-opacity-40 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
         "
-      ></section>
-      <section
-        class="h-40 bg-textLight rounded-br-4xl relative before:transform before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl"
       >
-        <ul>
+        <h2 class="pt-40 text-center">Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-11 px-3 justify-items-center w-full">
+          <div class="">Project 1</div>
+          <div class="">Project 2</div>
+          <div class="">Project 3</div>
+          <div class="">Project 4</div>
+          <div class="">Project 5</div>
+          <div class="">Project 6</div>
+          <div class="">Project 7</div>
+          <div class="">Project 8</div>
+          <div class="">Project 9</div>
+        </div>
+      </section>
+      <section
+        class="
+          h-[min-content]
+          bg-textLight
+          rounded-br-4xl
+          relative
+          py-28
+          before:transform before:bg-red-700 before:bg-opacity-40 before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl
+        "
+      >
+        <h2>tools</h2>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 px-3 justify-items-center w-full">
           <li>one</li>
           <li>two</li>
           <li>three</li>
@@ -66,8 +98,8 @@
           <li>five</li>
         </ul>
       </section>
-      <section class="my-28 relative after:h-28 after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl">
-        <h2 class="text-xl text-center">Contact me</h2>
+      <section class="py-32 relative after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl px-3">
+        <h2 class="text-xl text-center bg-primaryLight my-2">Contact me</h2>
         <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
           <fieldset class="flex flex-col align-top justify-between">
             <input
@@ -110,21 +142,39 @@
         bg-primary
         relative
         z-30
-        before:h-28 before:w-full before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl
-        after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl
+        before:h-28 before:w-full before:bg-red-700 before:bg-opacity-40 before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl
+        after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl after:bg-red-700 after:bg-opacity-40
       "
     >
-      <ul class="flex w-full justify-around">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <ul class="flex w-full justify-around">
+      <div class="px-3">
+        <ul class="flex justify-between text-white">
+          <li>
+            <a href="https://twitter.com/shaqzee_" target="_blank" class="cursor-pointer"><i class="fab fa-twitter hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/AshakaE" target="_blank" class="cursor-pointer"><i class="fab fa-github hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+          </li>
+          <li>
+            <a href="mailto:ashakaegerega@gmail.com" target="_blank" class="cursor-pointer"><i class="fas fa-envelope hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+          </li>
+          <li>
+            <a href="https://angel.co/u/ashakae" target="_blank" class="cursor-pointer"><i class="fab fa-angellist hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ashakae/" target="_blank" class="cursor-pointer"><i class="fab fa-linkedin hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+          </li>
+        </ul>
+        <hr />
+        <!-- <ul class="flex w-full justify-around">
         <li>Portfolio</li>
         <li>Tools</li>
         <li>Services</li>
         <li>Contact</li>
-      </ul>
+      </ul> -->
+        <div class="text-center text-white">
+          <span> Copyright 2021 </span>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

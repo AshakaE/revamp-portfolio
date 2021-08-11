@@ -76,22 +76,22 @@
 }
 
 .one {
-  animation-name: slide;
   animation-duration: 1s;
+  animation-name: slide;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   animation-fill-mode: forwards;
 }
 
 .two {
-  animation-name: slide;
   animation-duration: 1.2s;
+  animation-name: slide;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   animation-fill-mode: forwards;
 }
 
 .three {
-  animation-name: slide;
   animation-duration: 1.5s;
+  animation-name: slide;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   animation-fill-mode: forwards;
 }
@@ -107,11 +107,11 @@
 
 @keyframes slide {
   0% {
-    transform: translateX(-80px);
-    -webkit-transform: translateX(-80px);
-    -moz-transform: translateX(-80px);
-    -ms-transform: translateX(-80px);
-    -o-transform: translateX(-80px);
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
   }
   100% {
     transform: translateX(0px);
@@ -124,7 +124,6 @@
 
 input[type="text"]::placeholder {
   color: #989ACD;
-  opacity: 70%;
 }
 
 textarea::-webkit-input-placeholder, textarea::-moz-placeholder {

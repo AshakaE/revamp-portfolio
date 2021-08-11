@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         head: ["poppins"],
-        body: ["noto-sans"],
+        body: ["noto sans"],
       },
       boxShadow: {
         scoop: "0 50px 0 0 #1C2AAF",
