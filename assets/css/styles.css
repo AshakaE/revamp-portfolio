@@ -133,3 +133,17 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder {
 ::-webkit-resizer {
   resize: none;
 }
+
+@media (min-width: 640px) {
+  .viewInfo .info {
+    top: 100%;
+    transition: top .5s cubic-bezier(0.83, 0, 0.17, 1);
+    -webkit-transition: top .5s cubic-bezier(0.83, 0, 0.17, 1);
+    -moz-transition: top .5s cubic-bezier(0.83, 0, 0.17, 1);
+    -ms-transition: top .5s cubic-bezier(0.83, 0, 0.17, 1);
+    -o-transition: top .5s cubic-bezier(0.83, 0, 0.17, 1);
+  }
+  .viewInfo:hover .info {
+    top: 0px;
+  }
+}

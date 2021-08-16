@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="h-full w-80 m-auto font-body">
+  <body class="h-full m-auto font-body">
     <nav class="w-80 flex justify-between bg-primary relative">
       <div>one</div>
       <ul class="flex">
@@ -20,12 +20,12 @@
       </ul>
       <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12">
         <div class="pl-3">
-          <h2 class="text-xl text-white z-30">Home</h2>
+          <h2 class="text-xl text-white z-30 font-semibold">Home</h2>
         </div>
         <div id="toggle-icon" class="z-50 right-[1.1rem] top-[.7rem] pr-3">
-          <div class="bar1 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
-          <div class="bar2 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
-          <div class="bar3 w-9 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
+          <div class="bar1 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
+          <div class="bar2 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
+          <div class="bar3 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
         </div>
         <div class="panel z-30 absolute rounded-b-xl w-80" id="data-panel">
           <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items text-white text-3xl font-semibold" id="data-list">
@@ -36,24 +36,80 @@
         </div>
       </div>
     </nav>
-    <main class="mt-10">
-      <header class="text-white bg-primary px-3">
-        <div class="bg-primaryLight rounded-2xl p-3 text-center">
-          <h1>
+    <main class="mt-6">
+      <header class="text-white bg-primary px-3 pt-4 h-[min-content]">
+        <div class="bg-primaryLight rounded-2xl px-4 py-3 text-center">
+          <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
             <span>I'm a software developer</span>
           </h1>
-          <p>
+          <p class="mt-7 text">
             I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
           </p>
+          <ul class="flex justify-between text-white mt-7 px-5">
+            <li>
+              <a href="https://twitter.com/shaqzee_" target="_blank" class="cursor-pointer"><i class="fab fa-twitter hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/AshakaE" target="_blank" class="cursor-pointer"><i class="fab fa-github hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+            </li>
+            <li>
+              <a href="mailto:ashakaegerega@gmail.com" target="_blank" class="cursor-pointer"><i class="fas fa-envelope hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+            </li>
+            <li>
+              <a href="https://angel.co/u/ashakae" target="_blank" class="cursor-pointer"><i class="fab fa-angellist hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ashakae/" target="_blank" class="cursor-pointer"><i class="fab fa-linkedin hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
+            </li>
+          </ul>
         </div>
       </header>
       <section class="bg-primary text-white h-[min-content] py-28">
-        <h2 class="text-center">Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-3 justify-items-center w-full">
-          <div class="">Project 1</div>
-          <div class="">Project 2</div>
-          <div class="">Project 3</div>
+        <h2 class="text-center font-head text-2xl font-semibold uppercase">services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-4 justify-items-center w-full">
+          <div class="bg-primaryLight rounded-2xl p-3">
+            <div class="text-white flex items-center">
+              <div class="mr-4">
+                <img src="https://icongr.am/clarity/tree-view.svg?size=45&color=ffffff" alt="api" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">API Building</h3>
+              </div>
+            </div>
+            <div class="mt-2">
+              <p class="text-sm">Build your APIs with Ruby on Rails, NodeJs or Go and deploy to Heroku.</p>
+            </div>
+          </div>
+          <div class="bg-primaryLight rounded-2xl p-3">
+            <div class="text-white flex items-center">
+              <div class="mr-4">
+                <img src="https://icongr.am/clarity/layers.svg?size=45&color=ffffff" alt="api" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Full Stack web apps</h3>
+              </div>
+            </div>
+            <div class="mt-2">
+              <p class="text-sm">Build your websites from scratch with Ruby on Rails or NodeJs and ReactJs</p>
+            </div>
+          </div>
+          <div class="bg-primaryLight rounded-2xl p-3">
+            <div class="text-white flex items-center">
+              <div class="mr-4">
+                <img src="https://icongr.am/clarity/application.svg?size=45&color=ffffff" alt="api" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Frontend development</h3>
+              </div>
+            </div>
+            <div class="mt-2">
+              <p class="text-sm">
+                Build pixel perfect UIs from Figma templates or with your product designer <br />
+                (SASS, BEM, TailwindCSS and Bootstrap)
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section
@@ -68,8 +124,36 @@
       >
         <h2 class="pt-40 text-center">Portfolio</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-11 px-3 justify-items-center w-full">
-          <div class="">Project 1</div>
-          <div class="">Project 2</div>
+          <div class="h-full w-[90%]">
+            <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
+              <div
+                class="bg-primaryLight h-80 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
+                style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
+              ></div>
+              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between">
+                <div>Description</div>
+                <div class="flex justify-between">
+                  <div>stacks</div>
+                  <div>links</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-full w-[90%]">
+            <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
+              <div
+                class="bg-primaryLight h-80 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
+                style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
+              ></div>
+              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between">
+                <div>Description</div>
+                <div class="flex justify-between">
+                  <div>stacks</div>
+                  <div>links</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="">Project 3</div>
           <div class="">Project 4</div>
           <div class="">Project 5</div>
@@ -99,7 +183,7 @@
         </ul>
       </section>
       <section class="py-32 relative after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl px-3">
-        <h2 class="text-xl text-center bg-primaryLight my-2">Contact me</h2>
+        <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
           <fieldset class="flex flex-col align-top justify-between">
             <input
@@ -135,7 +219,7 @@
       class="
         flex
         w-full
-        h-40
+        h-28
         bottom-0
         flex-col
         justify-center
@@ -146,8 +230,8 @@
         after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl after:bg-red-700 after:bg-opacity-40
       "
     >
-      <div class="px-3">
-        <ul class="flex justify-between text-white">
+      <div class="px-3 z-50 my-8">
+        <ul class="flex justify-between text-white mb-4 px-3">
           <li>
             <a href="https://twitter.com/shaqzee_" target="_blank" class="cursor-pointer"><i class="fab fa-twitter hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
           </li>
@@ -171,7 +255,7 @@
         <li>Services</li>
         <li>Contact</li>
       </ul> -->
-        <div class="text-center text-white">
+        <div class="text-center text-primaryLight mt-4">
           <span> Copyright 2021 </span>
         </div>
       </div>
