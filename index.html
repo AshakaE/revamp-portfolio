@@ -37,7 +37,7 @@
       </div>
     </nav>
     <main class="mt-6">
-      <header class="text-white bg-primary px-3 pt-4 h-[min-content]">
+      <header class="text-white bg-primary px-3 pt-4 h-[min-content] sm:px-28">
         <div class="bg-primaryLight rounded-2xl px-4 py-3 text-center">
           <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
@@ -67,8 +67,8 @@
       </header>
       <section class="bg-primary text-white h-[min-content] py-28">
         <h2 class="text-center font-head text-2xl font-semibold uppercase">services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-4 justify-items-center w-full">
-          <div class="bg-primaryLight rounded-2xl p-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-3 sm:px-28 justify-items-center w-full">
+          <div class="bg-primaryLight rounded-2xl p-3 w-full">
             <div class="text-white flex items-center">
               <div class="mr-4">
                 <img src="https://icongr.am/clarity/tree-view.svg?size=45&color=ffffff" alt="api" />
@@ -81,7 +81,7 @@
               <p class="text-sm">Build your APIs with Ruby on Rails, NodeJs or Go and deploy to Heroku.</p>
             </div>
           </div>
-          <div class="bg-primaryLight rounded-2xl p-3">
+          <div class="bg-primaryLight rounded-2xl p-3 w-full">
             <div class="text-white flex items-center">
               <div class="mr-4">
                 <img src="https://icongr.am/clarity/layers.svg?size=45&color=ffffff" alt="api" />
@@ -94,7 +94,7 @@
               <p class="text-sm">Build your websites from scratch with Ruby on Rails or NodeJs and ReactJs</p>
             </div>
           </div>
-          <div class="bg-primaryLight rounded-2xl p-3">
+          <div class="bg-primaryLight rounded-2xl p-3 w-full">
             <div class="text-white flex items-center">
               <div class="mr-4">
                 <img src="https://icongr.am/clarity/application.svg?size=45&color=ffffff" alt="api" />
@@ -126,14 +126,14 @@
         "
       >
         <h2 class="pt-40 text-center">Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-11 px-3 justify-items-center w-full">
-          <div class="h-full w-[90%]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-11 px-3 sm:px-28 justify-items-center w-full">
+          <div class="h-full w-full">
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
               <div
-                class="bg-primaryLight h-80 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
+                class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between">
+              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
                 <div>Description</div>
                 <div class="flex justify-between">
                   <div>stacks</div>
@@ -142,13 +142,13 @@
               </div>
             </div>
           </div>
-          <div class="h-full w-[90%]">
+          <div class="h-full w-full">
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
               <div
-                class="bg-primaryLight h-80 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
+                class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between">
+              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
                 <div>Description</div>
                 <div class="flex justify-between">
                   <div>stacks</div>
@@ -187,10 +187,21 @@
       </section>
       <section
         id="contact"
-        class="py-32 relative after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl px-3 transition duration-1000"
+        class="
+          py-32
+          relative
+          after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl
+          px-3
+          sm:px-28
+          transition
+          duration-1000
+          md:flex md:items-center
+        "
       >
-        <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-        <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
+        <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2 md:w-2/5 md:text-2xl md:text-left">
+          I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+        </h2>
+        <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 md:px-7 md:py-9 m-auto rounded-xl md:rounded-3xl w- md:w-3/5 lg:w-3/6">
           <fieldset class="flex flex-col align-top justify-between">
             <input
               id="email"
@@ -213,7 +224,7 @@
               name="message"
               class="mt-4 rounded-xl py-2 px-3 bg-bodyDark text-textDark overflow-hidden focus:border-[1px] focus:border-primaryLight outline-none area"
               placeholder="Enter your message here"
-              rows="3"
+              rows="4"
               required
             ></textarea>
             <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/4 rounded-xl py-2 text-white hover:cursor-pointer hover:bg-primary">Send</button>
@@ -237,7 +248,7 @@
       "
     >
       <div class="px-3 z-50 my-8">
-        <ul class="flex justify-between text-white mb-4 px-3">
+        <ul class="flex justify-between text-white mb-4 px-3 sm:px-28">
           <li>
             <a href="https://twitter.com/shaqzee_" target="_blank" class="cursor-pointer"><i class="fab fa-twitter hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
           </li>
