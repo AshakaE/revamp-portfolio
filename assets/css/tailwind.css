@@ -572,9 +572,6 @@ video {
 .h-28{
 	height: 7rem;
 }
-.w-80{
-	width: 20rem;
-}
 .w-full{
 	width: 100%;
 }
@@ -823,6 +820,9 @@ video {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
+}
+.duration-1000{
+	transition-duration: 1000ms;
 }
 .duration-\[1\.5s\]{
 	transition-duration: 1.5s;

@@ -20,6 +20,7 @@
 
 .panel {
   background-color: #abff2e;
+  opacity: 50%;
   position: fixed;
   top: 36px;
 }

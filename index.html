@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="h-full m-auto font-body">
-    <nav class="w-80 flex justify-between bg-primary relative">
+  <body class="h-full m-auto font-body transition duration-1000">
+    <nav class="w-full flex justify-between bg-primary relative">
       <div>one</div>
       <ul class="flex">
         <li>Portfolio</li>
@@ -27,11 +27,11 @@
           <div class="bar2 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
           <div class="bar3 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
         </div>
-        <div class="panel z-30 absolute rounded-b-xl w-80" id="data-panel">
+        <div class="panel z-30 absolute rounded-b-xl w-full" id="data-panel">
           <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items text-white text-3xl font-semibold" id="data-list">
-            <li class="one" id="one">Portfolio</li>
-            <li class="mt-4 two" id="two">About</li>
-            <li class="mt-4 three" id="three">Contact</li>
+            <li class="one" id="one"><a href="#portfolio">Portfolio</a></li>
+            <li class="mt-4 two" id="two"><a href="#about">About</a></li>
+            <li class="mt-4 three" id="three"><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -113,8 +113,11 @@
         </div>
       </section>
       <section
+        id="portfolio"
         class="
           h-[min-content]
+          transition
+          duration-1000
           relative
           bg-textLight
           rounded-tr-4xl
@@ -182,7 +185,10 @@
           <li>five</li>
         </ul>
       </section>
-      <section class="py-32 relative after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl px-3">
+      <section
+        id="contact"
+        class="py-32 relative after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl px-3 transition duration-1000"
+      >
         <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 m-auto rounded-xl">
           <fieldset class="flex flex-col align-top justify-between">
