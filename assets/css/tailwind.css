@@ -778,6 +778,10 @@ video {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 }
+.text-5xl{
+	font-size: 3rem;
+	line-height: 1;
+}
 .font-semibold{
 	font-weight: 600;
 }
@@ -791,6 +795,10 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
+.text-primaryLight{
+	--tw-text-opacity: 1;
+	color: rgba(55, 71, 229, var(--tw-text-opacity));
+}
 .text-primaryDark{
 	--tw-text-opacity: 1;
 	color: rgba(14, 24, 121, var(--tw-text-opacity));
@@ -799,9 +807,9 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(92, 96, 134, var(--tw-text-opacity));
 }
-.text-primaryLight{
-	--tw-text-opacity: 1;
-	color: rgba(55, 71, 229, var(--tw-text-opacity));
+.shadow-2xl{
+	--tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-md{
 	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
