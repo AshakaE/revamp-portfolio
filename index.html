@@ -37,8 +37,8 @@
       </div>
     </nav>
     <main class="mt-6">
-      <header class="text-white bg-primary px-3 pt-4 h-[min-content] sm:px-28">
-        <div class="bg-primaryLight rounded-2xl px-4 py-3 text-center">
+      <header class="text-white bg-primary px-2 pt-4 h-[min-content] sm:px-28">
+        <div class="bg-primaryLight rounded-2xl mx-16 md:mx-[18%] px-10 py-5 text-center">
           <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
             <span>I'm a software developer</span>
@@ -65,42 +65,29 @@
           </ul>
         </div>
       </header>
-      <section class="bg-primary text-white h-[min-content] py-28">
-        <h2 class="text-center font-head text-2xl font-semibold uppercase">services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10 px-3 sm:px-28 justify-items-center w-full">
-          <div class="bg-primaryLight rounded-2xl p-3 w-full shadow-2xl">
-            <div class="text-white flex items-center">
-              <div class="mr-4">
-                <img src="https://icongr.am/clarity/tree-view.svg?size=45&color=ffffff" alt="api" />
+      <section class="bg-primary text-white h-[min-content] py-28 px-14 lg:px-[18%]">
+        <h2 class="font-head text-white font-bold text-3xl text-center">Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7 py-10 w-full">
+          <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl  h-[min-content]">
+            <div class="text-white flex items-center w-full">
+              <div class="mr-4 md:w-1/4">
+                <img src="https://icongr.am/clarity/tree-view.svg?size=45&color=ffffff" alt="api" class="h-12 w-12" />
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">API Building</h3>
+              <div class="w-3/4">
+                <h3 class="font-semibold text-lg font-head">API Building</h3>
               </div>
             </div>
             <div class="mt-2">
               <p class="text-sm">Build your APIs with Ruby on Rails, NodeJs or Go and deploy to Heroku.</p>
             </div>
           </div>
-          <div class="bg-primaryLight rounded-2xl p-3 w-full shadow-2xl">
+          <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl h-[min-content]">
             <div class="text-white flex items-center">
-              <div class="mr-4">
-                <img src="https://icongr.am/clarity/layers.svg?size=45&color=ffffff" alt="api" />
+              <div class="mr-4 md:w-1/4">
+                <img src="https://icongr.am/clarity/application.svg?size=45&color=ffffff" alt="api" class="h-12 w-12" />
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">Full Stack web apps</h3>
-              </div>
-            </div>
-            <div class="mt-2">
-              <p class="text-sm">Build your websites from scratch with Ruby on Rails or NodeJs and ReactJs</p>
-            </div>
-          </div>
-          <div class="bg-primaryLight rounded-2xl p-3 w-full shadow-2xl">
-            <div class="text-white flex items-center">
-              <div class="mr-4">
-                <img src="https://icongr.am/clarity/application.svg?size=45&color=ffffff" alt="api" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">Frontend development</h3>
+              <div class="w-3/4">
+                <h3 class="font-semibold text-lg font-head">Frontend development</h3>
               </div>
             </div>
             <div class="mt-2">
@@ -110,6 +97,20 @@
               </p>
             </div>
           </div>
+          <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl h-[min-content]">
+            <div class="text-white flex items-center">
+              <div class="mr-4 md:w-1/4">
+                <img src="https://icongr.am/clarity/layers.svg?size=100&color=ffffff" alt="api" class="h-12 w-12" />
+              </div>
+              <div class="w-3/4">
+                <h3 class="font-semibold text-lg font-head">Full Stack web apps</h3>
+              </div>
+            </div>
+            <div class="mt-2">
+              <p class="text-sm">Build your websites from scratch with Ruby on Rails or NodeJs and ReactJs</p>
+            </div>
+          </div>
+          
         </div>
       </section>
       <section
@@ -125,7 +126,7 @@
           after:h-28 after:bg-red-700 after:bg-opacity-40 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
         "
       >
-        <h2 class="pt-40 text-center">Portfolio</h2>
+        <h2 class="pt-40 font-head text-primaryLight font-bold text-5xl text-center">Portfolio</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-11 px-3 sm:px-28 justify-items-center w-full">
           <div class="h-full w-full">
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
@@ -176,35 +177,41 @@
           before:transform before:bg-red-700 before:bg-opacity-40 before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl
         "
       >
-        <h2 class="font-head text-primaryLight font-bold text-5xl text-center">Languages</h2>
-        <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 px-3 justify-items-center w-full">
-          <li><img src="https://icongr.am/devicon/html5-original.svg?size=128&color=currentColor" alt="HTML5"></li>
-          <li><img src="https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor" alt="CSS3"></li>
-          <li><img src="https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor" alt="JavaScript"></li>
-          <li><img src="https://icongr.am/devicon/typescript-original.svg?size=128&color=currentColor" alt="TypeScript"></li>
-          <li><img src="https://icongr.am/devicon/react-original.svg?size=128&color=currentColor" alt="React"></li>
-          <li><img src="https://icongr.am/devicon/nodejs-original.svg?size=128&color=currentColor" alt="NodeJS"></li>
-          <li><img src="https://icongr.am/devicon/rails-original-wordmark.svg?size=128&color=currentColor" alt="Rails"></li>
-          <li><img src="https://icongr.am/devicon/ruby-original.svg?size=128&color=currentColor" alt="Ruby"></li>
-          <li><img src="https://icongr.am/devicon/go-original.svg?size=128&color=currentColor" alt="Go"></li>
-          <li><img src="https://icongr.am/devicon/mongodb-original.svg?size=128&color=currentColor" alt="MongoDB"></li>
-          <li><img src="https://icongr.am/devicon/postgresql-original.svg?size=128&color=currentColor" alt="PostgreSql"></li>
-          <li><img src="https://icongr.am/devicon/sass-original.svg?size=128&color=currentColor" alt="Sass"></li>
-          <li><img src="https://icongr.am/devicon/express-original-wordmark.svg?size=128&color=currentColor" alt="Express"></li>
-        </ul>
-        <h2 class="font-head text-primaryLight font-bold text-5xl text-center">tools</h2>
-        <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 px-3 justify-items-center w-full">
-          <li><img src="https://icongr.am/devicon/slack-original.svg?size=128&color=currentColor" alt="Slack"></li>
-          <li><img src="https://icongr.am/devicon/illustrator-plain.svg?size=128&color=currentColor" alt="Adobe Illustrator"></li>
-          <li><img src="https://icongr.am/devicon/heroku-original.svg?size=128&color=currentColor" alt="Heroku"></li>
-          <li><img src="https://icongr.am/devicon/git-original.svg?size=128&color=currentColor" alt="Git"></li>
-          <li><img src="https://icongr.am/devicon/github-original.svg?size=128&color=currentColor" alt="GitHub"></li>
-          <li><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma"></li>
-          <li><img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" alt="VSCode"></li>
-          <li><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind"></li>
-          <li><img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="Bootstrap"></li>
-          <!-- <li><img src="https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor" alt="Docker"></li> -->
-        </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start">
+          <div class="flex flex-col items-center m-auto h-full">
+            <h2 class="font-head text-primaryLight font-bold text-4xl text-center mb-10">Languages</h2>
+            <div class="grid grid-cols-4 md:grid-cols-5 gap-5 justify-items-center w-3/4">
+              <div><img src="https://icongr.am/devicon/html5-original.svg?size=80&color=currentColor" alt="HTML5"></div>
+              <div><img src="https://icongr.am/devicon/css3-original.svg?size=80&color=currentColor" alt="CSS3"></div>
+              <div><img src="https://icongr.am/devicon/sass-original.svg?size=80&color=currentColor" alt="Sass"></div>
+              <div><img src="https://icongr.am/devicon/javascript-original.svg?size=80&color=currentColor" alt="JavaScript"></div>
+              <div><img src="https://icongr.am/devicon/typescript-original.svg?size=80&color=currentColor" alt="TypeScript"></div>
+              <div><img src="https://icongr.am/devicon/react-original.svg?size=80&color=currentColor" alt="React"></div>
+              <div><img src="https://icongr.am/devicon/nodejs-original.svg?size=80&color=currentColor" alt="NodeJS"></div>
+              <div><img src="https://icongr.am/devicon/ruby-original.svg?size=80&color=currentColor" alt="Ruby"></div>
+              <div><img src="https://icongr.am/devicon/rails-original-wordmark.svg?size=80&color=currentColor" alt="Rails"></div>
+              <div><img src="https://icongr.am/devicon/go-original.svg?size=80&color=currentColor" alt="Go"></div>
+              <div><img src="https://icongr.am/devicon/mongodb-original.svg?size=80&color=currentColor" alt="MongoDB"></div>
+              <div><img src="https://icongr.am/devicon/express-original-wordmark.svg?size=80&color=currentColor" alt="Express"></div>
+              <div><img src="https://icongr.am/devicon/postgresql-original.svg?size=80&color=currentColor" alt="PostgreSql"></div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center m-auto h-full">
+            <h2 class="font-head text-primaryLight font-bold text-4xl text-center mb-10">Tools</h2>
+            <ul class="grid grid-cols-4 md:grid-cols-5 gap-5 justify-items-center w-3/4">
+              <li><img  src="https://icongr.am/devicon/slack-original.svg?size=80&color=currentColor" alt="Slack"></li>
+              <li><img  src="https://icongr.am/devicon/illustrator-plain.svg?size=80&color=currentColor" alt="Adobe Illustrator"></li>
+              <li><img  src="https://icongr.am/devicon/heroku-original.svg?size=80&color=currentColor" alt="Heroku"></li>
+              <li><img  src="https://icongr.am/devicon/git-original.svg?size=80&color=currentColor" alt="Git"></li>
+              <li><img  src="https://icongr.am/devicon/github-original.svg?size=80&color=currentColor" alt="GitHub"></li>
+              <li><img  src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma"></li>
+              <li><img  src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" alt="VSCode"></li>
+              <li><img  src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind"></li>
+              <li><img  src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="Bootstrap"></li>
+              <!-- <li><img src="https://icongr.am/devicon/css3-original.svg?size=80&color=currentColor" alt="Docker"></li> -->
+            </ul>
+          </div>
+        </div>
       </section>
       <section
         id="contact"
@@ -215,10 +222,12 @@
           px-3
           sm:px-28
           transition
-          duration-1000
-          md:flex md:items-center
+          duration-1000    
         "
       >
+      <h2 class="font-head text-primaryLight font-bold text-5xl text-center">Contact</h2>
+      <div class="md:flex md:items-center">
+
         <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2 md:w-2/5 md:text-2xl md:text-left">
           I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
         </h2>
@@ -251,6 +260,7 @@
             <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/4 rounded-xl py-2 text-white hover:cursor-pointer hover:bg-primary">Send</button>
           </fieldset>
         </form>
+      </div>
       </section>
     </main>
     <footer
