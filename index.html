@@ -11,14 +11,16 @@
     <script defer src="./app.js"></script>
   </head>
   <body class="h-full m-auto font-body transition duration-1000">
-    <nav class="w-full flex justify-between bg-primary relative">
-      <div>one</div>
-      <ul class="flex">
-        <li>Portfolio</li>
-        <li>About</li>
-        <li>Contact</li>
+    <nav class="w-full flex justify-between bg-primary fixed z-50 h-12 px-[18%]">
+      <div class="w-2/4 text-white">
+        <a href="#">Ashaka</a>
+      </div>
+      <ul class="grid grid-cols-3 justify-items-end w-2/4 text-white">
+        <li class="" id="one"><a href="#portfolio">Portfolio</a></li>
+        <li class="pl-auto id="two"><a href="#about">About</a></li>
+        <li class="pl-auto" id="three"><a href="#contact">Contact</a></li>
       </ul>
-      <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12">
+      <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12 md:hidden">
         <div class="pl-3">
           <h2 class="text-xl text-white z-30 font-semibold">Home</h2>
         </div>
@@ -36,9 +38,9 @@
         </div>
       </div>
     </nav>
-    <main class="mt-6">
-      <header class="text-white bg-primary px-2 pt-4 h-[min-content] sm:px-28">
-        <div class="bg-primaryLight rounded-2xl mx-16 md:mx-[18%] px-10 py-5 text-center">
+    <main>
+      <header class="text-white bg-primary pt-20 h-[min-content]">
+        <div class="bg-primaryLight rounded-2xl lg:mx-[18%] px-10 py-5 text-center">
           <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
             <span>I'm a software developer</span>
@@ -65,9 +67,9 @@
           </ul>
         </div>
       </header>
-      <section class="bg-primary text-white h-[min-content] py-28 px-14 lg:px-[18%]">
+      <section class="bg-primary text-white h-[min-content] py-28 px-14 lg:px-[24%]">
         <h2 class="font-head text-white font-bold text-3xl text-center">Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-7 py-10 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 w-full">
           <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl  h-[min-content]">
             <div class="text-white flex items-center w-full">
               <div class="mr-4 md:w-1/4">
@@ -120,14 +122,14 @@
           transition
           duration-1000
           relative
-          bg-textLight
+          bg-bodyDark
           rounded-tr-4xl
           before:h-28 before:bg-red-700 before:bg-opacity-40 before:w-[50%] before:absolute before:-top-28 before:shadow-troop before:rounded-bl-4xl
           after:h-28 after:bg-red-700 after:bg-opacity-40 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
         "
       >
         <h2 class="pt-40 font-head text-primaryLight font-bold text-5xl text-center">Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-11 px-3 sm:px-28 justify-items-center w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-11 px-[18%] justify-items-center w-full">
           <div class="h-full w-full">
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
               <div
@@ -170,7 +172,7 @@
       <section
         class="
           h-[min-content]
-          bg-textLight
+          bg-bodyDark
           rounded-br-4xl
           relative
           py-28
