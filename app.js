@@ -2,10 +2,14 @@ let anchorlinks = document.querySelectorAll('a[href^="#"]')
 let menu = document.getElementById("toggle-icon")
 let panel = document.getElementById("data-panel")
 let list = document.getElementById("data-list")
+let cntc = document.getElementById("cntc")
+let port = document.getElementById("port")
+let abt = document.getElementById("abt")
 let one = document.getElementById("one")
 let two = document.getElementById("two")
 let three = document.getElementById("three")
 anchorlinks = document.querySelectorAll('a[href^="#"]')
+let home = document.getElementById("home")
 let portfolio = document.getElementById("portfolio")
 let contact = document.getElementById("contact")
 let all = [one, two, three]
@@ -51,6 +55,10 @@ window.addEventListener("load", function () {
 for (let item of anchorlinks) {
   item.addEventListener("click", (e) => {
     let hashval = item.getAttribute("href")
+    console.log(hashval)
+    if (hashval === "#portfolio") {
+      port.classList.add("underline")
+    } 
     let target = document.querySelector(hashval)
     target.scrollIntoView({
       behavior: "smooth",

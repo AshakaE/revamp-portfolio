@@ -693,10 +693,6 @@ video {
 .p-5{
 	padding: 1.25rem;
 }
-.px-\[18\%\]{
-	padding-left: 18%;
-	padding-right: 18%;
-}
 .px-10{
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
@@ -724,6 +720,10 @@ video {
 .py-11{
 	padding-top: 2.75rem;
 	padding-bottom: 2.75rem;
+}
+.px-\[18\%\]{
+	padding-left: 18%;
+	padding-right: 18%;
 }
 .px-2{
 	padding-left: 0.5rem;
@@ -779,13 +779,13 @@ video {
 .font-head{
 	font-family: poppins;
 }
-.text-xl{
-	font-size: 1.25rem;
-	line-height: 1.75rem;
-}
 .text-3xl{
 	font-size: 1.875rem;
 	line-height: 2.25rem;
+}
+.text-xl{
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 .text-4xl{
 	font-size: 2.25rem;
@@ -803,11 +803,11 @@ video {
 	font-size: 3rem;
 	line-height: 1;
 }
-.font-semibold{
-	font-weight: 600;
-}
 .font-bold{
 	font-weight: 700;
+}
+.font-semibold{
+	font-weight: 600;
 }
 .text-white{
 	--tw-text-opacity: 1;
@@ -1074,6 +1074,10 @@ video {
 	}
 	.md\:rounded-3xl{
 		border-radius: 1.5rem;
+	}
+	.md\:px-\[18\%\]{
+		padding-left: 18%;
+		padding-right: 18%;
 	}
 	.md\:px-7{
 		padding-left: 1.75rem;

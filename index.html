@@ -11,14 +11,14 @@
     <script defer src="./app.js"></script>
   </head>
   <body class="h-full m-auto font-body transition duration-1000">
-    <nav class="w-full flex justify-between bg-primary fixed z-50 h-12 px-[18%]">
-      <div class="w-2/4 text-white">
-        <a href="#">Ashaka</a>
+    <nav class="w-full flex justify-between bg-primary fixed z-50 h-12 md:px-[18%]">
+      <div class="w-2/4 text-white font-bold">
+        <a href="#home" class="text-3xl">Ashaka</a>
       </div>
       <ul class="grid grid-cols-3 justify-items-end w-2/4 text-white">
-        <li class="" id="one"><a href="#portfolio">Portfolio</a></li>
-        <li class="pl-auto id="two"><a href="#about">About</a></li>
-        <li class="pl-auto" id="three"><a href="#contact">Contact</a></li>
+        <li id="port"><a href="#portfolio" >Portfolio</a></li>
+        <li id="abt"><a href="#about" >About</a></li>
+        <li id="cntc"><a href="#contact" >Contact</a></li>
       </ul>
       <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12 md:hidden">
         <div class="pl-3">
@@ -39,7 +39,7 @@
       </div>
     </nav>
     <main>
-      <header class="text-white bg-primary pt-20 h-[min-content]">
+      <header class="text-white bg-primary pt-20 h-[min-content]" id="home">
         <div class="bg-primaryLight rounded-2xl lg:mx-[18%] px-10 py-5 text-center">
           <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
