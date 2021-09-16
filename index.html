@@ -11,14 +11,14 @@
     <script defer src="./app.js"></script>
   </head>
   <body class="h-full m-auto font-body transition duration-1000">
-    <nav class="w-full flex justify-between bg-primary fixed z-50 h-12 md:px-[18%]">
+    <nav class="w-full flex justify-between items-center bg-primary fixed z-50 h-12 md:h-16 md:py-5 md:px-3 lg:px-[18%]">
       <div class="w-2/4 text-white font-bold">
-        <a href="#home" class="text-3xl">Ashaka</a>
+        <a href="#home" class="text-3xl duration-200 hover:text-textLight">Ashaka</a>
       </div>
       <ul class="grid grid-cols-3 justify-items-end w-2/4 text-white">
-        <li id="port"><a href="#portfolio" >Portfolio</a></li>
-        <li id="abt"><a href="#about" >About</a></li>
-        <li id="cntc"><a href="#contact" >Contact</a></li>
+        <li id="port"><a class=" text-lg duration-200 hover:text-xl" href="#portfolio" >Portfolio</a></li>
+        <li id="abt"><a class=" text-lg duration-200 hover:text-xl" href="#about" >About</a></li>
+        <li id="cntc"><a class=" text-lg duration-200 hover:text-xl" href="#contact" >Contact</a></li>
       </ul>
       <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12 md:hidden">
         <div class="pl-3">
@@ -40,7 +40,7 @@
     </nav>
     <main>
       <header class="text-white bg-primary pt-20 h-[min-content]" id="home">
-        <div class="bg-primaryLight rounded-2xl lg:mx-[18%] px-10 py-5 text-center">
+        <div class="bg-primaryLight rounded-2xl mx-3 lg:mx-[18%] px-10 py-5 text-center">
           <h1 class="font-bold text-4xl">
             Hey there. I'm Ashaka <br />
             <span>I'm a software developer</span>
@@ -67,7 +67,7 @@
           </ul>
         </div>
       </header>
-      <section class="bg-primary text-white h-[min-content] py-28 px-14 lg:px-[24%]">
+      <section class="bg-primary text-white h-[min-content] py-28 px-6 lg:px-[20%]">
         <h2 class="font-head text-white font-bold text-3xl text-center">Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 w-full">
           <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl  h-[min-content]">
@@ -179,8 +179,8 @@
           before:transform before:bg-red-700 before:bg-opacity-40 before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl
         "
       >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start">
-          <div class="flex flex-col items-center m-auto h-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start md:px-[18%] justify-between">
+          <div class="flex flex-col items-center m-auto h-full ">
             <h2 class="font-head text-primaryLight font-bold text-4xl text-center mb-10">Languages</h2>
             <div class="grid grid-cols-4 md:grid-cols-5 gap-5 justify-items-center w-3/4">
               <div><img src="https://icongr.am/devicon/html5-original.svg?size=80&color=currentColor" alt="HTML5"></div>
@@ -198,7 +198,7 @@
               <div><img src="https://icongr.am/devicon/postgresql-original.svg?size=80&color=currentColor" alt="PostgreSql"></div>
             </div>
           </div>
-          <div class="flex flex-col items-center m-auto h-full">
+          <div class="flex flex-col items-center m-auto h-full ">
             <h2 class="font-head text-primaryLight font-bold text-4xl text-center mb-10">Tools</h2>
             <ul class="grid grid-cols-4 md:grid-cols-5 gap-5 justify-items-center w-3/4">
               <li><img  src="https://icongr.am/devicon/slack-original.svg?size=80&color=currentColor" alt="Slack"></li>
@@ -210,7 +210,7 @@
               <li><img  src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" alt="VSCode"></li>
               <li><img  src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind"></li>
               <li><img  src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="Bootstrap"></li>
-              <!-- <li><img src="https://icongr.am/devicon/css3-original.svg?size=80&color=currentColor" alt="Docker"></li> -->
+              <li><img src="https://icongr.am/devicon/docker-original.svg?size=80&color=currentColor" alt="Docker"></li>
             </ul>
           </div>
         </div>
@@ -228,38 +228,37 @@
         "
       >
       <h2 class="font-head text-primaryLight font-bold text-5xl text-center">Contact</h2>
-      <div class="md:flex md:items-center">
-
-        <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2 md:w-2/5 md:text-2xl md:text-left">
+      <div class="md:flex flex-col lg:flex-row items-center lg:px-[13.6%]">
+        <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2 md:px-0 md:w-1/2  lg:text-left">
           I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
         </h2>
-        <form action="#" method="POST" class="bg-white shadow-md py-6 px-5 md:px-7 md:py-9 m-auto rounded-xl md:rounded-3xl w- md:w-3/5 lg:w-3/6">
+        <form action="#" method="POST" class="bg-white shadow-md py-8 px-5 md:px-10 lg:mx-40 md:py-9 m-auto rounded-xl md:rounded-3xl w-full lg:w-1/2 ">
           <fieldset class="flex flex-col align-top justify-between">
             <input
               id="email"
               name="email"
               type="text"
-              placeholder="Your email"
-              class="py-2 px-3 rounded-xl bg-bodyDark text-textDark focus:border-[1px] focus:border-primaryLight outline-none"
+              placeholder="Email"
+              class="py-3 px-4 rounded-xl bg-bodyDark text-textDark focus:border-[1px] focus:border-primaryLight outline-none"
               required
             />
             <input
               id="name"
               name="name"
               type="text"
-              placeholder="Your name"
-              class="mt-4 py-2 px-3 rounded-xl bg-bodyDark text-textDark focus:border-[1px] focus:border-primaryLight outline-none"
+              placeholder="Name"
+              class="mt-4 py-3 px-4 rounded-xl bg-bodyDark text-textDark focus:border-[1px] focus:border-primaryLight outline-none"
               required
             />
             <textarea
               id="message"
               name="message"
-              class="mt-4 rounded-xl py-2 px-3 bg-bodyDark text-textDark overflow-hidden focus:border-[1px] focus:border-primaryLight outline-none area"
+              class="mt-4 rounded-xl py-3 px-4 bg-bodyDark text-textDark overflow-hidden focus:border-[1px] focus:border-primaryLight outline-none area"
               placeholder="Enter your message here"
               rows="4"
               required
             ></textarea>
-            <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/4 rounded-xl py-2 text-white hover:cursor-pointer hover:bg-primary">Send</button>
+            <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/5 rounded-xl py-2 text-white hover:cursor-pointer hover:bg-primary">Send</button>
           </fieldset>
         </form>
       </div>
@@ -280,7 +279,7 @@
         after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl after:bg-red-700 after:bg-opacity-40
       "
     >
-      <div class="px-3 z-50 my-8">
+      <div class="px-3 z-50 my-8 md:px-[18%]">
         <ul class="flex justify-between text-white mb-4 px-3 sm:px-28">
           <li>
             <a href="https://twitter.com/shaqzee_" target="_blank" class="cursor-pointer"><i class="fab fa-twitter hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
@@ -298,7 +297,7 @@
             <a href="https://www.linkedin.com/in/ashakae/" target="_blank" class="cursor-pointer"><i class="fab fa-linkedin hover:text-bodyDark transform hover:scale-150 duration-200"></i></a>
           </li>
         </ul>
-        <hr />
+        <hr class="border-primaryLight" />
         <!-- <ul class="flex w-full justify-around">
         <li>Portfolio</li>
         <li>Tools</li>
