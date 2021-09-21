@@ -11,33 +11,34 @@
     <script defer src="./app.js"></script>
   </head>
   <body class="h-full m-auto font-body transition duration-1000">
-    <nav class="w-full flex justify-between items-center bg-primary fixed z-50 h-12 md:h-16 md:py-5 md:px-3 lg:px-[18%]">
-      <div class="w-2/4 text-white font-bold">
+    <nav class="w-full flex justify-between items-center bg-primary bg-opacity-50 fixed z-50 h-16 md:py-5 md:px-3 lg:px-[18%] backdrop-filter backdrop-blur-md rounded-b-lg ">
+      <!-- <div class="h-full absolute w-full inset-0 bg-primary fliter blur-xl  z-0">&nbsp;</div> -->
+      <div class="w-2/4 text-white font-bold hidden md:block">
         <a href="#home" class="text-3xl duration-200 hover:text-textLight">Ashaka</a>
       </div>
-      <ul class="grid grid-cols-3 justify-items-end w-2/4 text-white">
+      <ul class="md:grid grid-cols-3 justify-items-end w-2/4 text-white hidden">
         <li id="port"><a class=" text-lg duration-200 hover:text-xl" href="#portfolio" >Portfolio</a></li>
         <li id="abt"><a class=" text-lg duration-200 hover:text-xl" href="#about" >About</a></li>
         <li id="cntc"><a class=" text-lg duration-200 hover:text-xl" href="#contact" >Contact</a></li>
       </ul>
-      <div class="flex justify-between items-center w-full fixed bg-[#abff2e] z-50 h-12 md:hidden">
-        <div class="pl-3">
-          <h2 class="text-xl text-white z-30 font-semibold">Home</h2>
+      <div class="flex justify-between items-center w-full fixed bg-primary bg-opacity-50 z-[100] py-5 h-16 md:hidden backdrop-filter backdrop-blur-md rounded-b-lg">
+        <div class="pl-3 text-white font-bold">
+          <a href="#home" class="text-3xl duration-200 hover:text-textLight">Ashaka</a>
         </div>
-        <div id="toggle-icon" class="z-50 right-[1.1rem] top-[.7rem] pr-3">
+        <div id="toggle-icon" class="z-30 right-[1.1rem] top-[.7rem] pr-3">
           <div class="bar1 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
           <div class="bar2 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
           <div class="bar3 w-8 h-[3px] my-[7px] bg-white transition ease-menu-expo duration-[1.5s]"></div>
         </div>
-        <div class="panel z-30 absolute rounded-b-xl w-full" id="data-panel">
-          <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items text-white text-3xl font-semibold" id="data-list">
-            <li class="one" id="one"><a href="#portfolio">Portfolio</a></li>
-            <li class="mt-4 two" id="two"><a href="#about">About</a></li>
-            <li class="mt-4 three" id="three"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
       </div>
     </nav>
+    <div class="panel z-10 absolute rounded-b-xl w-full mt-5" id="data-panel">
+      <ul class="flex flex-col w-full justify-center pt-16 pl-10 data-list list-items text-white text-3xl font-semibold" id="data-list">
+        <li class="one" id="one"><a href="#portfolio">Portfolio</a></li>
+        <li class="mt-4 two" id="two"><a href="#about">About</a></li>
+        <li class="mt-4 three" id="three"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
     <main>
       <header class="text-white bg-primary pt-20 h-[min-content]" id="home">
         <div class="bg-primaryLight rounded-2xl mx-3 lg:mx-[18%] px-10 py-5 text-center">
@@ -128,8 +129,8 @@
           after:h-28 after:bg-red-700 after:bg-opacity-40 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
         "
       >
-        <h2 class="pt-40 font-head text-primaryLight font-bold text-5xl text-center">Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-11 px-[18%] justify-items-center w-full">
+        <h2 class="pt-40 font-head text-primaryLight font-bold text-5xl text-center lg:text-left lg:px-[18%]">Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-11 px-5 lg:px-[18%] justify-items-center w-full">
           <div class="h-full w-full">
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
               <div
@@ -179,7 +180,7 @@
           before:transform before:bg-red-700 before:bg-opacity-40 before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl
         "
       >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start md:px-[18%] justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start lg:px-[18%] justify-between">
           <div class="flex flex-col items-center m-auto h-full ">
             <h2 class="font-head text-primaryLight font-bold text-4xl text-center mb-10">Languages</h2>
             <div class="grid grid-cols-4 md:grid-cols-5 gap-5 justify-items-center w-3/4">
@@ -227,7 +228,7 @@
           duration-1000    
         "
       >
-      <h2 class="font-head text-primaryLight font-bold text-5xl text-center  mb-8">Contact</h2>
+      <h2 class="font-head text-primaryLight font-bold text-5xl text-center mb-8 lg:text-left lg:px-[13.6%]">Contact</h2>
       <div class="md:flex flex-col lg:flex-row items-center lg:px-[13.6%]">
         <h2 class="text-3xl text-center my-2 text-primaryDark font-bold px-2 md:px-0 md:w-3/5 lg:mr-16 lg:text-left lg:w-[700px]">
           I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
