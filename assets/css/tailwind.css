@@ -518,11 +518,17 @@ video {
 .top-\[\.7rem\]{
 	top: .7rem;
 }
+.left-\[380px\]{
+	left: 380px;
+}
+.top-48{
+	top: 12rem;
+}
 .left-\[420px\]{
 	left: 420px;
 }
-.top-40{
-	top: 10rem;
+.top-96{
+	top: 24rem;
 }
 .left-0{
 	left: 0px;
@@ -862,12 +868,20 @@ video {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 }
-.text-sm{
-	font-size: 0.875rem;
-	line-height: 1.25rem;
+.text-base{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.text-xl{
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 .text-\[15rem\]{
 	font-size: 15rem;
+}
+.text-sm{
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
 .text-5xl{
 	font-size: 3rem;
@@ -1209,8 +1223,11 @@ video {
 		margin-left: 18%;
 		margin-right: 18%;
 	}
-	.lg\:mt-80{
-		margin-top: 20rem;
+	.lg\:mt-72{
+		margin-top: 18rem;
+	}
+	.lg\:mt-\[560px\]{
+		margin-top: 560px;
 	}
 	.lg\:mb-56{
 		margin-bottom: 14rem;
@@ -1246,6 +1263,10 @@ video {
 		padding-left: 18%;
 		padding-right: 18%;
 	}
+	.lg\:px-44{
+		padding-left: 11rem;
+		padding-right: 11rem;
+	}
 	.lg\:px-\[20\%\]{
 		padding-left: 20%;
 		padding-right: 20%;
@@ -1257,13 +1278,21 @@ video {
 	.lg\:text-left{
 		text-align: left;
 	}
-	.lg\:text-5xl{
-		font-size: 3rem;
+	.lg\:text-6xl{
+		font-size: 3.75rem;
 		line-height: 1;
+	}
+	.lg\:text-xl{
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 	}
 	.lg\:text-2xl{
 		font-size: 1.5rem;
 		line-height: 2rem;
+	}
+	.lg\:text-5xl{
+		font-size: 3rem;
+		line-height: 1;
 	}
 	.lg\:text-base{
 		font-size: 1rem;
