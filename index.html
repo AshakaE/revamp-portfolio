@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="h-full m-auto font-body transition duration-1000">
+  <body class="h-full m-auto font-body transition duration-1000">    
     <nav class="w-full flex justify-between items-center bg-primary bg-opacity-50 fixed z-50 h-16 md:py-5 md:px-3 lg:px-[18%] backdrop-filter backdrop-blur-md rounded-b-lg ">
       <!-- <div class="h-full absolute w-full inset-0 bg-primary fliter blur-xl  z-0">&nbsp;</div> -->
       <div class="w-2/4 text-white font-bold hidden md:block">
@@ -39,10 +39,9 @@
         <li class="mt-4 three" id="three"><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <main>
-      <header class="text-white bg-primary pt-20 h-[min-content]" id="home">
-        
-        <div class="bg-primaryLight rounded-2xl mx-3 lg:mx-[18%] px-10 py-5 text-center lg:mt-72">
+    <main>   
+      <header class="text-white bg-primary pt-20 h-[min-content] relative lg:pb-40" id="home">       
+        <div class="bg-primaryLight rounded-2xl mx-3 lg:mx-[18%] px-10 py-5 text-center lg:mt-72 relative z-20">
           <h1 class="font-bold text-4xl lg:text-6xl">
             Hey there. I'm Ashaka <br />
             <span>I'm a software developer</span>
@@ -71,9 +70,16 @@
         <div class="absolute z-0 inset-0 left-[380px] top-48 opacity-50 hidden lg:block">
           <h2 class="text-[15rem] font-bold font-head text-textBg leading-[150px] hidden lg:block">About</h2>
         </div>
-      </header>
+      </header> 
+      <div class="lines z-10">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>     
       <section class="bg-primary relative text-white h-[min-content] py-28 px-6 lg:px-[20%]" id="services">
-        <div class="relative z-20 lg:mt-[560px] lg:mb-56">
+        <div class="relative z-20 lg:mt-[400px] lg:mb-56">
           <h2 class="font-head text-white font-bold text-3xl lg:text-5xl lg:text-left text-center">Services</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 w-full z-20">
             <div class="bg-primaryLight rounded-2xl p-5 w-auto shadow-2xl  h-[min-content]">
@@ -121,7 +127,7 @@
             
           </div>
         </div>
-        <div class="absolute z-0 inset-0 left-[420px] top-96 opacity-50 hidden lg:block">
+        <div class="absolute z-0 inset-0 left-[420px] top-60 opacity-50 hidden lg:block">
           <h2 class="text-[15rem] font-bold font-head text-textBg leading-[150px] hidden lg:block">my <br>services</h2>
         </div>
       </section>
@@ -273,6 +279,7 @@
         </form>
       </div>
       </section>
+
     </main>
     <footer
       class="

@@ -527,8 +527,8 @@ video {
 .left-\[420px\]{
 	left: 420px;
 }
-.top-96{
-	top: 24rem;
+.top-60{
+	top: 15rem;
 }
 .left-0{
 	left: 0px;
@@ -1226,8 +1226,8 @@ video {
 	.lg\:mt-72{
 		margin-top: 18rem;
 	}
-	.lg\:mt-\[560px\]{
-		margin-top: 560px;
+	.lg\:mt-\[400px\]{
+		margin-top: 400px;
 	}
 	.lg\:mb-56{
 		margin-bottom: 14rem;
@@ -1274,6 +1274,9 @@ video {
 	.lg\:px-\[13\.6\%\]{
 		padding-left: 13.6%;
 		padding-right: 13.6%;
+	}
+	.lg\:pb-40{
+		padding-bottom: 10rem;
 	}
 	.lg\:text-left{
 		text-align: left;
