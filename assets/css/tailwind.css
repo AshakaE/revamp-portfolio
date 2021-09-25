@@ -530,6 +530,9 @@ video {
 .top-60{
 	top: 15rem;
 }
+.left-\[320px\]{
+	left: 320px;
+}
 .left-0{
 	left: 0px;
 }
@@ -908,6 +911,10 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(55, 71, 229, var(--tw-text-opacity));
 }
+.text-textLight{
+	--tw-text-opacity: 1;
+	color: rgba(209, 214, 254, var(--tw-text-opacity));
+}
 .text-primaryDark{
 	--tw-text-opacity: 1;
 	color: rgba(14, 24, 121, var(--tw-text-opacity));
@@ -1277,6 +1284,9 @@ video {
 	}
 	.lg\:pb-40{
 		padding-bottom: 10rem;
+	}
+	.lg\:pt-\[500px\]{
+		padding-top: 500px;
 	}
 	.lg\:text-left{
 		text-align: left;
