@@ -19,8 +19,8 @@
 }
 
 .panel {
-  background-color: #abff2e;
-  opacity: 50%;
+  background-color: rgb(28, 42, 175, .5);
+  backdrop-filter: blur(5px);
   position: fixed;
   top: 36px;
 }
