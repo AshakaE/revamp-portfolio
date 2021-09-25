@@ -536,6 +536,9 @@ video {
 .left-0{
 	left: 0px;
 }
+.left-\[375px\]{
+	left: 375px;
+}
 .bottom-0{
 	bottom: 0px;
 }
@@ -847,6 +850,9 @@ video {
 .pt-40{
 	padding-top: 10rem;
 }
+.pl-\[13px\]{
+	padding-left: 13px;
+}
 .text-center{
 	text-align: center;
 }
@@ -889,6 +895,9 @@ video {
 .text-5xl{
 	font-size: 3rem;
 	line-height: 1;
+}
+.text-\[14rem\]{
+	font-size: 14rem;
 }
 .font-bold{
 	font-weight: 700;
@@ -1194,6 +1203,9 @@ video {
 	.md\:grid-cols-5{
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
+	.md\:items-center{
+		align-items: center;
+	}
 	.md\:self-end{
 		align-self: flex-end;
 	}
@@ -1266,6 +1278,9 @@ video {
 	.lg\:flex-row{
 		flex-direction: row;
 	}
+	.lg\:items-start{
+		align-items: flex-start;
+	}
 	.lg\:px-\[18\%\]{
 		padding-left: 18%;
 		padding-right: 18%;
@@ -1278,15 +1293,21 @@ video {
 		padding-left: 20%;
 		padding-right: 20%;
 	}
-	.lg\:px-\[13\.6\%\]{
-		padding-left: 13.6%;
-		padding-right: 13.6%;
+	.lg\:px-\[14\.2\%\]{
+		padding-left: 14.2%;
+		padding-right: 14.2%;
 	}
 	.lg\:pb-40{
 		padding-bottom: 10rem;
 	}
 	.lg\:pt-\[500px\]{
 		padding-top: 500px;
+	}
+	.lg\:pt-\[330px\]{
+		padding-top: 330px;
+	}
+	.lg\:pb-48{
+		padding-bottom: 12rem;
 	}
 	.lg\:text-left{
 		text-align: left;
