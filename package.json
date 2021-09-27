@@ -8,12 +8,17 @@
     "tw:prod": "cross-env NODE_ENV=production postcss build ./src/tailwind.css -o ./assets/css/tailwind.css -w --verbose --minify",
     "tw:watch": "onchange tailwind.config.js src/**/*.css ./**/*.html -- npm run tw:build",
     "start": "servor . index.html --reload --browse",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run tw:watch\""
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run tw:watch\"",
+    "gen": "graphql-codegen -r dotenv/config --config codegen.yml"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.2.0",
+    "@graphql-codegen/typescript": "^2.2.2",
+    "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@graphql-codegen/typescript-urql": "^3.2.0",
     "autoprefixer": "^10.3.1",
     "concurrently": "^6.2.1",
     "postcss": "^8.3.6",
@@ -23,7 +28,11 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.7",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.6.0",
+    "graphql-tag": "^2.12.5",
     "onchange": "^7.1.0",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "urql": "^2.0.5"
   }
 }
