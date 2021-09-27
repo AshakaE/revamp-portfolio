@@ -1,45 +1,45 @@
 // require('dotenv').config();
 
-let content = {
-  query: `{
-  viewer {
-    pinnedItems(first: 6) {
-      edges {
-        node {
-          ... on Repository {
-            name
-            description
-            pushedAt
-            url
-            homepageUrl
-          }
-        }
-      }
-    }
-  }
-}
-`,
-};
-let body = JSON.stringify(content);
+// let content = {
+//   query: `{
+//   viewer {
+//     pinnedItems(first: 6) {
+//       edges {
+//         node {
+//           ... on Repository {
+//             name
+//             description
+//             pushedAt
+//             url
+//             homepageUrl
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `,
+// };
+// let body = JSON.stringify(content);
 
-fetch('https://api.github.com/graphql', {
-  method: 'POST',
-  headers: {
-    // Authorization: `Bearer  ${process.env.REACT_APP_GH_TOKEN}`,
-    Authorization: 'Bearer  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',
-    'Content-Type': 'application/json',
-  },
-  body: body,
-})
-  .then((response) => response.json())
-  .then((data) => {
-    // res = JSON.stringify(data, null, 2);
-    vals = data.data.viewer.pinnedItems.edges;
-    console.log(vals);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// fetch('https://api.github.com/graphql', {
+//   method: 'POST',
+//   headers: {
+//     // Authorization: `Bearer  ${process.env.REACT_APP_GH_TOKEN}`,
+//     Authorization: 'Bearer  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',
+//     'Content-Type': 'application/json',
+//   },
+//   body: body,
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     // res = JSON.stringify(data, null, 2);
+//     vals = data.data.viewer.pinnedItems.edges;
+//     console.log(vals);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
 const sendMail = (mail) => {
   //1.

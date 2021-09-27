@@ -18,7 +18,7 @@ app.listen(PORT, () => {
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com', //replace with your email provider
-  port: 465,
+  port: 587,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
