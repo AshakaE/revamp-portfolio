@@ -6,6 +6,7 @@ const multiparty = require('multiparty');
 require('dotenv').config();
 
 const app = express();
+app.use(express.static(`${__dirname}/public`));
 
 //make the contact page the the first page on the app
 app.route('/').get(function (req, res) {
