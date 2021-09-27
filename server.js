@@ -1,27 +1,21 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.urlencoded({ extended: true }));
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty');
 require('dotenv').config();
 
 const app = express();
+app.use(cors({ origin: '*' }));
 app.use(express.static(`${__dirname}/public`));
 
-//make the contact page the the first page on the app
-app.route('/').get(function (req, res) {
-  res.sendFile(process.cwd() + '/index.html');
-});
-
-//port will be 5000 for testing
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-});
+//make the contact page the the first page on the app
+app.use('/public', express.static(process.cwd() + '/public'));
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com', //replace with your email provider
-  port: 587,
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
@@ -37,10 +31,10 @@ app.post('/send', (req, res) => {
     Object.keys(fields).forEach(function (property) {
       data[property] = fields[property].toString();
     });
-
+    console.log(data);
     //2. You can configure the object however you want
     const mail = {
-      from: data.name,
+      from: `${data.name} <${data.email}>`,
       to: process.env.EMAIL,
       subject: data.subject,
       text: `${data.name} <${data.email}> \n${data.message}`,
@@ -57,6 +51,15 @@ app.post('/send', (req, res) => {
     });
   });
 });
+
+app.route('/').get(function (req, res) {
+  res.sendFile(process.cwd() + '/public/index.html');
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
+});
+
 // POST route from contact form
 // app.post('/contact', (req, res) => {
 //   // Instantiate the SMTP server
