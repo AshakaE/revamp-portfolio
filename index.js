@@ -41,6 +41,16 @@ fetch('https://api.github.com/graphql', {
     console.log(error);
   });
 
+const sendMail = (mail) => {
+  //1.
+  fetch('https://objective-borg-174efc.netlify.app/send', {
+    method: 'post', //2.
+    body: mail, //3.
+  }).then((response) => {
+    return response.json();
+  });
+};
+
 const form = document.getElementById('contact-form');
 
 const formEvent = form.addEventListener('submit', (event) => {
