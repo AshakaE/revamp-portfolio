@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({ origin: '*' }));
 app.use(express.static(`${__dirname}/public`));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7000;
 //make the contact page the the first page on the app
 app.use('/public', express.static(process.cwd() + '/public'));
 
@@ -17,8 +17,10 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
+    type: 'OAuth2',
     user: process.env.EMAIL,
-    pass: process.env.PASS,
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
   },
 });
 
