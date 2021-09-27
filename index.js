@@ -40,6 +40,15 @@
 //   .catch((error) => {
 //     console.log(error);
 //   });
+const form = document.getElementById('contact-form');
+
+const formEvent = form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  let mail = new FormData(form);
+
+  sendMail(mail);
+});
 
 const sendMail = (mail) => {
   //1.
@@ -50,16 +59,6 @@ const sendMail = (mail) => {
     return response.json();
   });
 };
-
-const form = document.getElementById('contact-form');
-
-const formEvent = form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  let mail = new FormData(form);
-
-  sendMail(mail);
-});
 
 // fetch('https://api.github.com/users/ashakae/repos')
 //   .then((response) => response.json())

@@ -7,7 +7,7 @@ const app = express();
 
 //make the contact page the the first page on the app
 app.route('/').get(function (req, res) {
-  res.sendFile(process.cwd() + './index.html');
+  res.sendFile(process.cwd() + '/index.html');
 });
 
 //port will be 5000 for testing
