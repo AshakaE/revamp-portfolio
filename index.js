@@ -52,7 +52,7 @@ const formEvent = form.addEventListener('submit', (event) => {
 
 const sendMail = (mail) => {
   //1.
-  fetch('https://objective-borg-174efc.netlify.app/send', {
+  fetch('https://tranquil-retreat-36205.herokuapp.com/send', {
     method: 'post', //2.
     body: mail, //3.
   }).then((response) => {
