@@ -1,94 +1,66 @@
-const express = require('express');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-const multiparty = require('multiparty');
-require('dotenv').config();
+import express from "express"
+import fetch from "node-fetch"
+import cors from "cors"
+import dotenv from "dotenv"
+import { dirname } from "path"
+import { fileURLToPath } from "url"
 
-const app = express();
-app.use(cors({ origin: '*' }));
-app.use(express.static(`${__dirname}/public`));
+dotenv.config()
 
-const PORT = process.env.PORT || 7000;
+const app = express()
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+app.use(cors({ origin: "*" }))
+app.use(express.static(`${__dirname}/public`))
+
+const PORT = process.env.PORT || 7000
 //make the contact page the the first page on the app
-app.use('/public', express.static(process.cwd() + '/public'));
+// app.use("/public", static(process.cwd() + "/public"))
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', //replace with your email provider
-  port: 465,
-  secure: true,
-  auth: {
-    type: 'OAuth2',
-    user: process.env.EMAIL,
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-  },
-});
-
-app.post('/send', (req, res) => {
-  //1.
-  let form = new multiparty.Form();
-  let data = {};
-  form.parse(req, function (err, fields) {
-    console.log(fields);
-    Object.keys(fields).forEach(function (property) {
-      data[property] = fields[property].toString();
-    });
-    console.log(data);
-    //2. You can configure the object however you want
-    const mail = {
-      from: `${data.name} <${data.email}>`,
-      to: process.env.EMAIL,
-      subject: data.subject,
-      text: `${data.name} <${data.email}> \n${data.message}`,
-    };
-
-    //3.
-    transporter.sendMail(mail, (err, data) => {
-      if (err) {
-        console.log(err);
-        res.status(500).send('Something went wrong.');
-      } else {
-        res.status(200).send('Email successfully sent to recipient!');
+app.route("/").get(function (req, res) {
+  let content = {
+    query: `{
+    viewer {
+      pinnedItems(first: 6) {
+        edges {
+          node {
+            ... on Repository {
+              name
+              description
+              pushedAt
+              url
+              homepageUrl
+            }
+          }
+        }
       }
-    });
-  });
-});
-
-app.route('/').get(function (req, res) {
-  res.sendFile(process.cwd() + '/public/index.html');
-});
+    }
+  }
+  `,
+  }
+  let body = JSON.stringify(content)
+  fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.GH_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: body,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // let ves = JSON.stringify(data, null, 2)
+      let vals = data.data.viewer.pinnedItems.edges
+      console.log(typeof vals)
+      let an = vals[0].node.name
+      res.status(200).send({ an })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  // res.sendFile(process.cwd() + "/public/index.html")
+})
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-});
-
-// POST route from contact form
-// app.post('/contact', (req, res) => {
-//   // Instantiate the SMTP server
-//   const smtpTrans = nodemailer.createTransport({
-//     host: 'smtp.gmail.com',
-//     port: 465,
-//     secure: true,
-//     auth: {
-//       user: process.env.EMAIL,
-//       pass: process.env.PASS,
-//     },
-//   });
-
-//   // Specify what the email will look like
-//   const mailOpts = {
-//     from: 'Your sender info here', // This is ignored by Gmail
-//     to: process.env.EMAIL,
-//     subject: 'New message from contact form at tylerkrys.ca',
-//     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`,
-//   };
-
-//   // Attempt to send the email
-//   smtpTrans.sendMail(mailOpts, (error, response) => {
-//     if (error) {
-//       res.render('contact-failure'); // Show a page indicating failure
-//     } else {
-//       res.render('contact-success'); // Show a page indicating success
-//     }
-//   });
-// });
+  console.log(`Listening on port ${PORT}...`)
+})
