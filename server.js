@@ -2,20 +2,15 @@ import express from "express"
 import fetch from "node-fetch"
 import cors from "cors"
 import dotenv from "dotenv"
-import { dirname } from "path"
-import { fileURLToPath } from "url"
 
 dotenv.config()
 
 const app = express()
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 app.use(cors({ origin: "*" }))
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static("public"))
+app.set("view engine", "ejs")
 
 const PORT = process.env.PORT || 7000
-//make the contact page the the first page on the app
-// app.use("/public", static(process.cwd() + "/public"))
 
 app.route("/").get(function (req, res) {
   let content = {
@@ -30,6 +25,11 @@ app.route("/").get(function (req, res) {
               pushedAt
               url
               homepageUrl
+              languages(first: 10) {
+                nodes {
+                  name
+                }
+              }
             }
           }
         }
@@ -49,16 +49,32 @@ app.route("/").get(function (req, res) {
   })
     .then((response) => response.json())
     .then((data) => {
-      // let ves = JSON.stringify(data, null, 2)
       let vals = data.data.viewer.pinnedItems.edges
-      console.log(typeof vals)
-      let an = vals[0].node.name
-      res.status(200).send({ an })
+      console.log(vals)
+
+      // let an = vals[0].node
+      // let stack = vals.node.languages
+      // console.log(vals)
+      // let tags = Object.values(stack)
+
+      console.log(stack[0][0].name)
+
+      let payload = {
+        Description: "",
+        toGit: "",
+        toDemo: "",
+      }
+      for (let i = 0; i < 6; i++) {
+        payload[`Description${i}`] = vals[i].node.description
+        payload[`toGit${i}`] = vals[i].node.url
+        payload[`toDemo${i}`] = vals[i].node.homepageurl
+      }
+
+      res.render("index", payload)
     })
     .catch((error) => {
       console.log(error)
     })
-  // res.sendFile(process.cwd() + "/public/index.html")
 })
 
 app.listen(PORT, () => {
