@@ -61,6 +61,8 @@ app.route("/").get(function (req, res) {
         toGit: "",
         toDemo: "",
         stacks: "",
+        mediaUrl:
+          "background-image: url(https://raw.githubusercontent.com/AshakaE/react-math-app/develop/docs/snapshot.jpeg)",
       }
       for (let i = 0; i < 6; i++) {
         payload[`Description${i}`] = vals[i].node.description
