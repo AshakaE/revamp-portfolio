@@ -50,24 +50,32 @@ app.route("/").get(function (req, res) {
     .then((response) => response.json())
     .then((data) => {
       let vals = data.data.viewer.pinnedItems.edges
-      console.log(vals)
 
-      // let an = vals[0].node
-      // let stack = vals.node.languages
-      // console.log(vals)
+      // let stack = Object.values(vals[0].node.languages.nodes)
       // let tags = Object.values(stack)
 
-      console.log(stack[0][0].name)
+      // tags = tags.map((a) => a.name)
 
       let payload = {
         Description: "",
         toGit: "",
         toDemo: "",
+        stacks: "",
       }
       for (let i = 0; i < 6; i++) {
         payload[`Description${i}`] = vals[i].node.description
         payload[`toGit${i}`] = vals[i].node.url
         payload[`toDemo${i}`] = vals[i].node.homepageurl
+        // for (let j = 0; j < vals[i].node.languages.nodes.length; j++) {
+        let stack = Object.values(vals[i].node.languages.nodes)
+        let tags = Object.values(stack)
+        tags = tags.map((a) => a.name)
+        // payload[`stacks${i}`] = tags[j].name
+        // let all = []
+        // all.push(tags[j].name)
+        // console.log(all)
+        payload[`stacks${i}`] = tags.join(", ")
+        // }
       }
 
       res.render("index", payload)
