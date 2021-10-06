@@ -18,6 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "concurrently": "^6.2.1",
+    "json-bigint": ">=1.0.0",
     "nodemon": "^2.0.13",
     "nth-check": ">=2.0.1",
     "postcss": "^8.3.6",
@@ -31,7 +32,7 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "googleapis": "^39.2.0",
+    "googleapis": "^88.2.0",
     "multiparty": "^4.2.2",
     "node-fetch": "^3.0.0",
     "nodemailer": "^6.6.5",
