@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4DMK063JX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V4DMK063JX');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="app.js" async defer></script>
+    <script type="text/javascript" src="main.js" async defer></script>
   </head>
   <body class="h-full m-auto font-body transition duration-1000">    
     <nav class="w-full flex justify-between items-center bg-primary bg-opacity-50 fixed z-50 h-16 md:py-5 md:px-3 lg:px-[18%] backdrop-filter backdrop-blur-md md:rounded-b-6xl rounded-b-lg">
@@ -400,7 +412,7 @@
             I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
           </h2>
         </div>
-        <form id="contact-form" enctype = "multipart/form-data" action="send" method="POST" class="bg-white shadow-md md:self-end py-8 lg:mx-24 lg:w-[600px] px-5 md:px-10 md:py-9 m-auto rounded-xl md:rounded-3xl w-full z-20">
+        <form id="contact-form" enctype = "multipart/form-data" action="/send" method="POST" class="bg-white shadow-md md:self-end py-8 lg:mx-24 lg:w-[600px] px-5 md:px-10 md:py-9 m-auto rounded-xl md:rounded-3xl w-full z-20">
           <fieldset class="flex flex-col align-top justify-between">
             <input
               id="name"
@@ -436,6 +448,8 @@
             ></textarea>
             <button type="submit" value="Submit" class="mt-5 bg-primaryLight w-2/5 rounded-xl py-2 text-white transition duration-200 hover:cursor-pointer hover:bg-primary">Send</button>
           </fieldset>
+          <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+          <br/> -->
         </form>
       </div>
       </section>    
@@ -489,6 +503,5 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
