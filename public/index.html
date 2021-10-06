@@ -37,8 +37,7 @@
         <li class="mt-4 two" id="two"><a href="#services">Services</a></li>
         <li class="mt-4 three" id="three"><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    
+    </div> 
     <main>   
       <header class="text-white bg-primary pt-20 h-[min-content] relative lg:pb-40" id="home">       
         <div class="bg-primaryLight rounded-2xl mx-3 lg:mx-[18%] px-10 py-5 text-center lg:mt-72 relative z-20">
@@ -68,7 +67,7 @@
           </ul>
         </div>
         <div class="absolute z-0 inset-0 left-[380px] top-48 opacity-50 hidden lg:block">
-          <h2 class="text-[15rem] font-bold font-head text-textBg leading-[150px] hidden lg:block">About</h2>
+          <h2 class="text-[15rem] font-bold font-head text-textBg leading-[150px] hidden lg:block w-[min-content] h-[min-content]">About</h2>
         </div>
       </header>    
       <section class="bg-primary relative text-white h-[min-content] py-28 px-6 lg:px-[20%]" id="services">
@@ -120,7 +119,7 @@
             
           </div>
         </div>
-        <div class="absolute z-0 inset-0 left-[420px] top-60 opacity-50 hidden lg:block">
+        <div class="absolute z-0 inset-0 left-[420px] top-60 opacity-50 hidden lg:block w-[min-content] h-[min-content]">
           <h2 class="text-[15rem] font-bold font-head text-textBg leading-[150px] hidden lg:block">my <br>services</h2>
         </div>
       </section>
@@ -130,15 +129,26 @@
           h-[min-content]
           transition
           duration-1000
-          relative
           bg-bodyDark
-          rounded-tr-4xl
-          before:h-28 before:bg-red-700 before:bg-opacity-40 before:w-[50%] before:absolute before:-top-28 before:shadow-troop before:rounded-bl-4xl
-          after:h-28 after:bg-red-700 after:bg-opacity-40 after:w-[50%] after:left-[50%] after:absolute after:-top-0 after:shadow-scoop after:rounded-bl-4xl after:transfrom after:rotate-180
+          relative
+          before:absolute
+          
+          before:top-[-128px]
+          before:h-32
+          before:w-32
+          epshadow
+          before:rounded-bl-6xl
+          after:absolute
+          
+          after:right-0
+          after:top-0
+          after:h-32
+          after:w-32
+          after:rounded-tr-6xl
         "
       >
         <h2 class="pt-40 font-head text-primaryLight font-bold text-5xl text-center lg:text-left lg:px-[18%] lg:pt-[500px] z-10 relative">Portfolio</h2>
-        <div class="absolute z-0 inset-0 left-[320px] top-48 opacity-50 hidden lg:block">
+        <div class="absolute z-0 inset-0 left-[320px] top-48 opacity-50 hidden lg:block w-[min-content] h-[min-content]">
           <h2 class="text-[15rem] font-bold font-head text-textLight leading-[150px] hidden lg:block">my <br> portfolio</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-11 px-5 lg:px-[18%] justify-items-center w-full z-30">
@@ -148,13 +158,24 @@
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description0 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks0 %></div>
-                  <div>
-                    <div><%= toGit0 %></div>
-                    <div><%= toDemo0 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description0 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks0 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo0 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit0 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -166,13 +187,24 @@
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description1 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks1 %></div>
-                  <div>
-                    <div><%= toGit1 %></div>
-                    <div><%= toDemo1 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description1 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks1 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo1 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit1 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -184,13 +216,24 @@
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description2 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks2 %></div>
-                  <div>
-                    <div><%= toGit2 %></div>
-                    <div><%= toDemo2 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description2 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks2 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo2 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit2 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -202,13 +245,24 @@
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description3 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks3 %></div>
-                  <div>
-                    <div><%= toGit3 %></div>
-                    <div><%= toDemo3 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description3 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks3 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo3 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit3 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -220,13 +274,24 @@
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
                 style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description4 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks4 %></div>
-                  <div>
-                    <div><%= toGit4 %></div>
-                    <div><%= toDemo4 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description4 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks4 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo4 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit4 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -236,31 +301,46 @@
             <div class="h-[min-content] w-full relative sm:overflow-hidden viewInfo">
               <div
                 class="bg-primaryLight h-64 w-full viewInfo bg-cover bg-center rounded-t-lg sm:rounded-lg"
-                style="<%= mediaUrl %>"
+                style="background-image: url(https://graphiccloud.net/wp-content/uploads/2019/01/Wide-Billboard-Mockup-1849x1200.jpg)"
               ></div>
-              <div class="bg-white rounded-lg sm:bg-black/50 sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
-                <div><%= Description5 %></div>
-                <div class="flex justify-between">
-                  <div><%= stacks5 %></div>
-                  <div>
-                    <div><%= toGit5 %></div>
-                    <div><%= toDemo5 %></div>
+              <div class="bg-white sm:bg-black/50 sm:backdrop-filter rounded-lg sm:backdrop-blur-sm sm:absolute w-full h-40 sm:h-full -mt-5 sm:mt-0 sm:top-[100%] left-0 info flex flex-col px-2 py-1 justify-between text-white">
+                <div class="text-center pt-2 text-primaryLight sm:text-white"><%= Description5 %></div>
+                <div class="flex justify-between items-center flex-col">
+                  <div class="pb-1 text-center w-full text-primaryLight sm:text-white">
+                    <span class="italic font-head font-light text-xs text-left">
+                      Built with
+                    </span>
+                    <div>
+                      <%= stacks5 %>
+                    </div>
+                  </div>
+                  <div class="flex justify-around w-full pb-1">
+                    <a target="_blank" href="<%= toDemo5 %>" rel="noopener noreferrer" title="External Link" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-bl-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fas fa-external-link-alt fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="<%= toGit5 %>" rel="noopener noreferrer" title="Source Code" class="bg-white/5 w-1/2 text-center p-1 sm:hover:shadow-inner rounded-br-lg transition duration-10 border border-textLight sm:border-none">
+                      <i class="fab fa-github fa-lg sm:text-white text-primaryLight" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </section>
       <section
         class="
           h-[min-content]
           bg-bodyDark
-          rounded-br-4xl
-          relative
+          rounded-br-6xl
           py-28
-          before:transform before:bg-red-700 before:bg-opacity-40 before:rotate-180 before:h-32 before:w-full before:absolute before:-bottom-32 before:shadow-troop before:rounded-br-4xl
+          relative
+        before:absolute
+        before:bottom-[-128px]
+        before:h-32
+        before:w-32
+        bpshadow
+        before:rounded-tl-6xl
         "
       >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-start lg:px-[18%] justify-between">
@@ -304,14 +384,13 @@
         class="
           py-32
           relative
-          after:h-[min-content] after:left-[50%] after:w-[50%] after:absolute after:top-[-14rem] after:shadow-droop after:rounded-br-4xl
           px-3
           sm:px-28
           transition
           duration-1000    
         "
       >
-      <div class="absolute z-0 inset-0 left-[375px] top-48 opacity-50 hidden lg:block">
+      <div class="absolute z-0 inset-0 left-[375px] top-48 opacity-50 hidden lg:block w-[min-content] h-[min-content]">
         <h2 class="text-[14rem] font-bold font-head text-bodyDark leading-[150px] hidden lg:block">connect<br><span class="pl-[13px]">with me</span></h2>
       </div>
       <div class="md:flex md:items-center flex-col lg:flex-row lg:items-start lg:px-[14.2%] z-20 lg:pt-[330px] lg:pb-48">
@@ -359,22 +438,31 @@
           </fieldset>
         </form>
       </div>
-      </section>
-      
+      </section>    
     </main>
     <footer
       class="
         flex
         w-full
-        h-28
-        bottom-0
+        h-48
         flex-col
         justify-center
         bg-primary
         relative
-        z-30
-        before:h-28 before:w-full before:bg-red-700 before:bg-opacity-40 before:absolute before:-top-32 before:shadow-scoop before:rounded-bl-4xl
-        after:h-28 after:w-full after:absolute after:-top-32 after:shadow-scoop after:rounded-br-4xl after:bg-red-700 after:bg-opacity-40
+        before:absolute
+
+        before:bottom-48
+        before:h-32
+        before:w-32
+        tbshadow
+        before:rounded-bl-6xl
+        after:absolute
+
+        after:bottom-48
+        after:right-0
+        after:h-32
+        after:w-32
+        after:rounded-br-6xl
       "
     >
       <div class="px-3 z-50 my-8 md:px-[18%]">
@@ -396,12 +484,6 @@
           </li>
         </ul>
         <hr class="border-primaryLight" />
-        <!-- <ul class="flex w-full justify-around">
-        <li>Portfolio</li>
-        <li>Tools</li>
-        <li>Services</li>
-        <li>Contact</li>
-      </ul> -->
         <div class="text-center text-primaryLight mt-4 text-base">
           <span> Copyright 2021 </span>
         </div>
