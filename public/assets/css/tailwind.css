@@ -800,8 +800,14 @@ video {
 .bg-center{
 	background-position: center;
 }
+.bg-origin-content{
+	background-origin: content-box;
+}
 .p-5{
 	padding: 1.25rem;
+}
+.p-4{
+	padding: 1rem;
 }
 .p-1{
 	padding: 0.25rem;
@@ -1214,6 +1220,10 @@ video {
 	}
 	.md\:rounded-3xl{
 		border-radius: 1.5rem;
+	}
+	.md\:rounded-b-6xl{
+		border-bottom-right-radius: 4.5rem;
+		border-bottom-left-radius: 4.5rem;
 	}
 	.md\:py-5{
 		padding-top: 1.25rem;
