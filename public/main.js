@@ -9,8 +9,8 @@ const formEvent = form.addEventListener("submit", (event) => {
 })
 
 const sendMail = (mail) => {
-  fetch("http://localhost:7000/send", {
-    method: "post", 
+  fetch("https://ashakae.herokuapp.com/send", {
+    method: "post",
     body: mail,
   }).then((response) => {
     return response.json()
