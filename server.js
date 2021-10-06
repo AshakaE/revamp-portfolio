@@ -50,7 +50,6 @@ app.route("/").get(function (req, res) {
     .then((response) => response.json())
     .then((data) => {
       let vals = data.data.viewer.pinnedItems.edges
-
       // let stack = Object.values(vals[0].node.languages.nodes)
       // let tags = Object.values(stack)
 
@@ -67,7 +66,10 @@ app.route("/").get(function (req, res) {
       for (let i = 0; i < 6; i++) {
         payload[`Description${i}`] = vals[i].node.description
         payload[`toGit${i}`] = vals[i].node.url
-        payload[`toDemo${i}`] = vals[i].node.homepageurl
+        payload[`toDemo${i}`] = vals[i].node.homepageUrl
+        payload[
+          `mediaUrl${i}`
+        ] = `https://raw.githubusercontent.com/AshakaE/${vals[i].node.name}/main/docs/snapshot.png`
         // for (let j = 0; j < vals[i].node.languages.nodes.length; j++) {
         let stack = Object.values(vals[i].node.languages.nodes)
         let tags = Object.values(stack)
