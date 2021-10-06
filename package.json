@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "tw:build": "cross-env TAILWIND_MODE=build postcss ./src/tailwind.css -o ./public/assets/css/tailwind.css --verbose",
     "tw:prod": "cross-env NODE_ENV=production postcss build ./src/tailwind.css -o ./public/assets/css/tailwind.css -w --verbose --minify",
