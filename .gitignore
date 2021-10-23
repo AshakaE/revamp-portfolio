@@ -3,3 +3,7 @@ node_modules/
 credentials.json
 token.json
 index.js
+live.crt
+server.csr
+server.key
+server.pass.key
