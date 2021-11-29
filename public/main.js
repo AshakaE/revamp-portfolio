@@ -1,18 +1,18 @@
-const form = document.getElementById("contact-form")
+// const form = document.getElementById("contact-form")
 
-const formEvent = form.addEventListener("submit", (event) => {
-  event.preventDefault()
+// const formEvent = form.addEventListener("submit", (event) => {
+//   event.preventDefault()
 
-  let mail = new FormData(form)
+//   let mail = new FormData(form)
 
-  sendMail(mail)
-})
+//   sendMail(mail)
+// })
 
-const sendMail = (mail) => {
-  fetch("https://ashakae.herokuapp.com/send", {
-    method: "post",
-    body: mail,
-  }).then((response) => {
-    return response.json()
-  })
-}
+// const sendMail = (mail) => {
+//   fetch("https://ashakae.herokuapp.com/send", {
+//     method: "post",
+//     body: mail,
+//   }).then((response) => {
+//     return response.json()
+//   })
+// }
